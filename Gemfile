@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor'
+gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -42,7 +43,6 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'annotate'
   gem 'better_errors'
-  gem 'jquery-rails'
 
 end
 
