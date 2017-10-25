@@ -4,6 +4,7 @@ class NewSessionForm extends React.Component {
 
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       username: "",
       password: ""
@@ -18,7 +19,7 @@ class NewSessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.submitForm(this.state);
+    this.props.submitForm(this.state).then(this.props.hideModal);
   }
 
   render() {

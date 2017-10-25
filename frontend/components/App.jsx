@@ -1,22 +1,34 @@
 import React from 'react';
 import NavBar from './nav_bar/nav_bar';
 import Footer from './footer/footer';
-const App = (props) => {
-    const Modal = props.modal;
-    return (
+import MyModal from './myModal';
+
+import { connect } from 'react-redux';
+
+const App = ({modal, hideModal}) => (
     <div>
       <header>
         <NavBar />
       </header>
 
       <h1>SRO(ttenTomatoes)</h1>
-      { Modal ? <Modal /> : null }
 
       <footer>
         <Footer />
       </footer>
     </div>
-  );
+);
+
+const mapStateToProps = ({ ui: { modal }}) => {
+  return {
+    modal,
+  };
 };
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    hideModal: () => dispatch(hideModal())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
