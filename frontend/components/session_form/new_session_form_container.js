@@ -12,10 +12,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  const formType = "Sign In";
   return {
     submitForm: user => dispatch(login(user)),
-    formType
   };
 };
 
