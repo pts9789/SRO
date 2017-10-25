@@ -5,6 +5,7 @@ class NewUserForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
+        email: "",
         username: "",
         password: ""
       };
@@ -26,6 +27,14 @@ class NewUserForm extends React.Component {
         <div>
           <h2>Please Sign Up!</h2>
           <form onSubmit={this.handleSubmit}>
+            
+            <label>Email:
+              <input
+                type="text"
+                value={this.state.email}
+                onChange={this.update('email')} />
+            </label>
+
             <label>Username:
               <input
                 type="text"
@@ -35,7 +44,7 @@ class NewUserForm extends React.Component {
 
             <label>Password:
               <input
-                type="text"
+                type="password"
                 value={this.state.password}
                 onChange={this.update('password')} />
             </label>

@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    submitForm: user => dispatch(login(user)),
+    submitForm: (user) => dispatch(login(user)),
   };
 };
 
