@@ -2,19 +2,19 @@ import React from 'react';
 
 const noCurrentUser = (showModal) => {
   return(
-    <div>
-      <button onClick={ (e) => showModal("login")}>Sign In</button>
-      <button onClick={ (e) => showModal("signup")}>Sign Up</button>
-    </div>
+      <ul className="session-list">
+        <li onClick={ (e) => showModal("login")}>SIGN IN</li>
+        <li onClick={ (e) => showModal("signup")}>SIGN UP</li>
+      </ul>
   );
 };
 
 const userLoggedIn = (currentUser, logout) => {
   return(
-    <div>
-      <h3>{currentUser.username}</h3>
-      <button onClick={logout}>Log Out</button>
-    </div>
+      <ul className="session-list">
+        <li>{currentUser.username}</li>
+        <li onClick={logout}>LOG OUT</li>
+      </ul>
   );
 };
 

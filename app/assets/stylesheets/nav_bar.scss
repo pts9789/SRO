@@ -1,0 +1,28 @@
+.nav-bar {
+  display: flex;
+  background-color: #009900;
+  justify-content: space-between;
+}
+
+
+.logo {
+  height: 55px;
+  width: auto;
+  margin: 2px 0 5px 15px;
+}
+
+.session-list {
+  display: flex;
+  flex: right;
+}
+
+.session-list, li {
+  color: white;
+  padding: 5px;
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+.session-list, li :hover {
+  cursor: pointer;
+}

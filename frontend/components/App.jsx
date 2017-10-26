@@ -6,8 +6,8 @@ import MyModal from './myModal';
 import { connect } from 'react-redux';
 
 const App = ({modal, hideModal}) => (
-    <div>
-      <header>
+    <div className="main-app">
+      <header className="app-header">
         <NavBar />
       </header>
 
