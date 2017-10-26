@@ -6,7 +6,9 @@ const MyModal = ({modal, component: Component, hideModal}) => {
     content = (
 
       <div className="modal-backdrop" onClick={hideModal}>
+        <div onClick={ (e) => e.stopPropagation() }>
           <Component/>
+        </div>
       </div>
     );
   }

@@ -27,7 +27,7 @@ class NewSessionForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, idx) => (
-          <li key={idx}>
+          <li key={idx} className="session-errors">
             {error}
           </li>
         ))}
@@ -37,28 +37,30 @@ class NewSessionForm extends React.Component {
 
   render() {
     return(
-      <div onClick={ (e) => e.stopPropagation() }>
-        <h2>Please Sign In!</h2>
+      <div className="modal-component session-form-container">
+        <h2>SIGN IN</h2>
         {this.renderErrors()}
-        <form onSubmit={this.handleSubmit}>
+        <form className="modal-form-box" onSubmit={this.handleSubmit}>
+          <div className="session-form">
+            <label>Username:
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.update('username')}/>
+            </label>
 
-          <label>Username:
+            <label>Password:
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update('password')}/>
+            </label>
+
+            <br/>
             <input
-              type="text"
-              value={this.state.username}
-              onChange={this.update('username')} />
-          </label>
-
-          <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')} />
-          </label>
-
-          <input
-            type="submit"
-            value="Sign In!" />
+              type="submit"
+              value="Sign In!"/>
+          </div>
         </form>
       </div>
     );

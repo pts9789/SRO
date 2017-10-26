@@ -3,9 +3,9 @@ import * as ApiUtil from "../util/session_api_util";
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
-export const receiveCurrentUser = (currentuser) => ({
+export const receiveCurrentUser = (currentUser) => ({
   type: RECEIVE_CURRENT_USER,
-  currentuser
+  currentUser
 });
 
 export const receiveSessionErrors = (errors) => ({
@@ -31,6 +31,6 @@ export const signup = (user) => (dispatch) => {
 
 export const logout = () => (dispatch) => {
   return ApiUtil.logout().then((user) => {
-    return dispatch(receiveCurrentUser(user));
+    return dispatch(receiveCurrentUser(null));
   });
 };
