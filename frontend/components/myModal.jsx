@@ -6,9 +6,7 @@ const MyModal = ({modal, component: Component, hideModal}) => {
     content = (
 
       <div className="modal-backdrop" onClick={hideModal}>
-        <div onClick={(e) => e.stopPropagation()}>
           <Component/>
-        </div>
       </div>
     );
   }
@@ -17,3 +15,6 @@ const MyModal = ({modal, component: Component, hideModal}) => {
 }
 
 export default MyModal;
+
+// each Modal (login, signup, *review) has its own
+// corresponding component (NewSessionForm, NewUserForm, *TBD)

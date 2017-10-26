@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from './nav_bar/nav_bar';
-import Footer from './footer/footer';
+import NavBar from './nav_bar';
+import Footer from './footer';
 import MyModal from './myModal';
 
 import { connect } from 'react-redux';

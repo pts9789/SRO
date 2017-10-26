@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { hideModal } from '../../actions/session_actions';
+import { hideModal } from '../../actions/modal_actions';
 import { signup } from '../../actions/session_actions';
 import NewUserForm from './new_user_form';
 
@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    submitForm: (user) => dispatch(signup(user)),
+    signup: (user) => dispatch(signup(user)),
     hideModal: () => dispatch(hideModal())
   };
 };

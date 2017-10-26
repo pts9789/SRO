@@ -5,5 +5,15 @@
    right: 0px;
    left: 0px;
    z-index: 10;
-   background: rgba(0,0,0,0.7);
+   background: rgba(0,0,0,0.5);
+ }
+
+ .modal-component {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: white;
  }

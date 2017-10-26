@@ -1,10 +1,10 @@
 export const SHOW_MODAL = 'SHOW_MODAL';
 export const HIDE_MODAL = 'HIDE_MODAL';
 
-export const showModal = (component) => {
+export const showModal = (modal) => {
   return({
     type: SHOW_MODAL,
-    component
+    modal
   });
 };
 

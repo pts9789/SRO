@@ -1,17 +1,14 @@
 import { HIDE_MODAL, SHOW_MODAL} from '../actions/modal_actions';
 
-const defaultState = {
-  component: null,
-};
 
-const ModalReducer = (state = defaultState, action) => {
+const ModalReducer = (state = null, action) => {
   Object.freeze(state);
 
   switch (action.type) {
     case SHOW_MODAL:
-      return {component: action.component};
+      return action.modal;
     case HIDE_MODAL:
-      return defaultState;
+      return null;
     default:
       return state;
   }
