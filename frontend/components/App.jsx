@@ -11,7 +11,7 @@ const App = ({modal, hideModal}) => (
         <NavBar />
       </header>
 
-      <h1>SRO(ttenTomatoes)</h1>
+      <h1>I'm the main page</h1>
 
       <footer>
         <Footer />

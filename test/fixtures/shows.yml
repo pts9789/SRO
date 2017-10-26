@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  type: 
+  year: MyString
+  status: MyString
+  theater_info: MyString
+  critic_consesnsus: MyString
+  img_url: MyString
+
+two:
+  title: MyString
+  type: 
+  year: MyString
+  status: MyString
+  theater_info: MyString
+  critic_consesnsus: MyString
+  img_url: MyString

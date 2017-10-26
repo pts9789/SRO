@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171024155633) do
+ActiveRecord::Schema.define(version: 20171026181904) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "shows", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "type", null: false
+    t.integer "year", null: false
+    t.string "status", null: false
+    t.string "theater_info", null: false
+    t.text "critic_consesnsus"
+    t.string "img_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
