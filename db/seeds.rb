@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 ActiveRecord::Base.transaction do
 
-u1 = User.create!({email: "guest@guest.com", username: "guest", password:"arizona"})
+u1 = User.create!({email: "guest", username: "guest", password:"arizona"})
 
 p1 = Play.new({
   title: "Harry Potter and the Cursed Child- Parts I and II",
@@ -16,8 +16,7 @@ p1 = Play.new({
   status: "Coming Soon",
   theater_info: "Lyric Theater: 213 W. 42nd St.",
   critic_consensus: ""})
-file = File.open('app/assets/show_posters/hp_poster.jpg')
-p1.image = file
+p1.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/hp_poster.jpg"
 p1.save!
 
 p2 = Play.new({
@@ -27,8 +26,7 @@ p2 = Play.new({
   status: "Coming Soon",
   theater_info: "Bernard B. Jacobs Theater: 242 W. 45th St.",
   critic_consensus: ""})
-file = File.open('app/assets/show_posters/timc_poster.jpg')
-p2.image = file
+p2.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/timc_poster.jpg"
 p2.save!
 
 p3 = Play.new({
@@ -38,8 +36,7 @@ p3 = Play.new({
   status: "Coming Soon",
   theater_info: "Studio 54: 254 W. 54th St.",
   critic_consensus: ""})
-file = File.open('app/assets/show_posters/coalg_poster.jpg')
-p3.image = file
+p3.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/coalg_poster.jpg"
 p3.save!
 
 p4 = Play.new({
@@ -49,8 +46,7 @@ p4 = Play.new({
   status: "Coming Soon",
   theater_info: "Theater Information Coming Soon!",
   critic_consensus: ""})
-file = File.open('app/assets/show_posters/tkamb_poster.jpg')
-p4.image = file
+p4.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tkamb_poster.jpg"
 p4.save!
 
 p5 = Play.new({
@@ -60,8 +56,7 @@ p5 = Play.new({
   status: "Coming Soon",
   theater_info: "Belasco Theater: 111 W. 44th St.",
   critic_consensus: ""})
-file = File.open('app/assets/show_posters/fatk_poster.jpg')
-p5.image = file
+p5.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/fatk_poster.jpg"
 p5.save!
 
 p6 = Play.new({
@@ -71,8 +66,7 @@ p6 = Play.new({
   status: "Now Playing",
   theater_info: "Lyceum Theatre: 149 W. 45th St.",
   critic_consensus: "This is a planned demolition (and an exceedingly well-executed one at that)...We wonder how on earth the performers are going to sustain this level of lunacy. Remarkably, they do."})
-file = File.open('app/assets/show_posters/tptgw_poster.jpg')
-p6.image = file
+p6.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tptgw_poster.jpg"
 p6.save!
 
 p7 = Play.new({
@@ -82,8 +76,7 @@ p7 = Play.new({
   status: "Now Playing",
   theater_info: "American Airlines Theatre: 227 W. 42nd St.",
   critic_consensus: "Be patient with 'Time and the Conways,' because it takes a little while to get going. You will be happy you stuck around, though..."})
-file = File.open('app/assets/show_posters/tatc_poster.jpg')
-p7.image = file
+p7.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tatc.jpg"
 p7.save!
 
 p8 = Play.new({
@@ -93,8 +86,7 @@ p8 = Play.new({
   status: "Now Playing",
   theater_info: "Cort Theatre: 138 W. 48th St.",
   critic_consensus: ""})
-file = File.open('app/assets/show_posters/butterfly_poster.png')
-p8.image = file
+p8.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/butterfly_poster.png"
 p8.save!
 
 p9 = Play.new({
@@ -104,8 +96,7 @@ p9 = Play.new({
   status: "Now Playing",
   theater_info: "Vivian Beaumont Theater: 150 W. 65th St.",
   critic_consensus: ""})
-file = File.open('app/assets/show_posters/junk_poster.jpg')
-p9.image = file
+p9.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/junk_poster.jpg"
 p9.save!
 
 p10 = Play.new({
@@ -115,8 +106,7 @@ p10 = Play.new({
   status: "Now Playing",
   theater_info: "Booth Theatre: 222 W. 45th St.",
   critic_consensus: ""})
-file = File.open('app/assets/show_posters/meteor_poster.jpg')
-p10.image = file
+p10.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/meteor_poster.jpg"
 p10.save!
 
 p11 = Play.new({
@@ -126,10 +116,8 @@ p11 = Play.new({
   status: "Now Playing",
   theater_info: "Studio 54: 254 W. 54th St.",
   critic_consensus: "It's heartening to see that Leguizamo hasn't mellowed with middle age...The main takeaway from 'Latin History for Morons' is laughs, not learning..."})
-file = File.open('app/assets/show_posters/lhfm_poster.jpg')
-p11.image = file
+p11.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/lhfm_poster.jpg"
 p11.save!
-
 
 # --------------------------------------------------------------------------
 
