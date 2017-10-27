@@ -68,10 +68,17 @@ class NewSessionForm extends React.Component {
               value="Log In"/>
           </div>
         </form>
+        <div className="session-form-footer">
+          <p>Already have an account?</p>
+          <p className="session-form-modal-switch" onClick={() => this.props.switchModal()}>Log in here</p>
+        </div>
       </div>
     );
 
   }
 }
+
+
+
 
 export default NewSessionForm;

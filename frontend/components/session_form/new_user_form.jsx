@@ -39,39 +39,51 @@ class NewUserForm extends React.Component {
     render() {
       return(
         <div className="modal-component session-form-container">
-          <h2 className="session-form-header">SIGN UP</h2>
+          <div className="session-form-header">
+            <p className="session-form-title">SIGN UP FOR SRO</p>
+            <p className="modal-close-x" onClick={ (e) => this.props.hideModal()}>x</p>
+          </div>
           {this.renderErrors()}
           <form className="modal-form-box" onSubmit={this.handleSubmit}>
-            <div className="session-form">
-              <label>Email:
+            <div>
+              <label className="session-form-label" htmlFor="email">Email</label>
                 <input
                   type="text"
+                  name="email"
                   value={this.state.email}
+                  className="session-form-input"
                   onChange={this.update('email')} />
-              </label>
 
-              <label>Username:
+              <label className="session-form-label" htmlFor="username">Username</label>
                 <input
                   type="text"
+                  name="username"
                   value={this.state.username}
+                  className="session-form-input"
                   onChange={this.update('username')} />
-              </label>
 
-              <label>Password:
+              <label className="session-form-label" htmlFor="password">Password</label>
                 <input
                   type="password"
+                  name="password"
                   value={this.state.password}
+                  className="session-form-input"
                   onChange={this.update('password')} />
-              </label>
-              <br />
+
               <input
                 type="submit"
-                value="Sign Up!" />
+                className="session-form-button"
+                value="Sign Up" />
             </div>
           </form>
+          <div className="session-form-footer">
+            <p>Don't have an account?</p>
+            <p className="session-form-modal-switch" onClick={() => this.props.switchModal()}>Sign up here</p>
+          </div>
         </div>
       );
     }
   }
+
 
 export default NewUserForm;

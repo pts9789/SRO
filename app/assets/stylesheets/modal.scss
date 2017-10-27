@@ -109,4 +109,23 @@
   background-color: #286090;
   border-color: #204d74;
 }
+
+.session-form-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  border-top: 1px solid #E0E0E0;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.session-form-modal-switch{
+  color: #3d9bd1;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.session-form-modal-switch:hover{
+  color: #53bbf1;
+}
 // styling help from Aa benchBnB

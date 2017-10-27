@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { hideModal } from '../../actions/modal_actions';
+import { hideModal, showModal } from '../../actions/modal_actions';
 import { signup } from '../../actions/session_actions';
 import NewUserForm from './new_user_form';
 
@@ -14,7 +14,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     signup: (user) => dispatch(signup(user)),
-    hideModal: () => dispatch(hideModal())
+    hideModal: () => dispatch(hideModal()),
+    switchModal: () => dispatch(showModal('login'))
   };
 };
 

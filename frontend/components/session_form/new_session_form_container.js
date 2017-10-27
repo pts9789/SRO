@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { hideModal } from '../../actions/modal_actions';
+import { hideModal, showModal } from '../../actions/modal_actions';
 import { login, logout } from '../../actions/session_actions';
 import NewSessionForm from './new_session_form';
 
@@ -15,6 +15,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     login: (user) => dispatch(login(user)),
     hideModal: () => dispatch(hideModal()),
+    switchModal: () => dispatch(showModal("signup"))
   };
 };
 

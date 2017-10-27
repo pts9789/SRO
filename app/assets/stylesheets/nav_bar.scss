@@ -1,5 +1,6 @@
 .nav-bar {
   display: flex;
+  justify-content: center;
   background-color: #3b9326;
   justify-content: space-between;
   height: 85px;
@@ -8,7 +9,7 @@
 .logo {
   height: 55px;
   width: auto;
-  margin: 10px 0 5px 20px;
+  margin: 15px 0 5px 20px;
 }
 
 .session-list {
@@ -21,8 +22,9 @@
   color: white;
   padding: 5px;
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
+  max-height: 20px;
 }
 
 .session-list li:hover {
