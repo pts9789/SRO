@@ -9,196 +9,183 @@ ActiveRecord::Base.transaction do
 
 u1 = User.create!({email: "guest", username: "guest", password:"arizona"})
 
-p1 = Play.new({
+p1 = Play.create!({
   title: "Harry Potter and the Cursed Child- Parts I and II",
   type: "Play",
   year: 2018,
   status: "Coming Soon",
   theater_info: "Lyric Theater: 213 W. 42nd St.",
-  critic_consensus: ""})
-p1.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/hp_poster.jpg"
-p1.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/hp_poster.jpg" })
 
-p2 = Play.new({
+p2 = Play.create!({
   title: "The Iceman Cometh",
   type: "Play",
   year: 2018,
   status: "Coming Soon",
   theater_info: "Bernard B. Jacobs Theater: 242 W. 45th St.",
-  critic_consensus: ""})
-p2.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/timc_poster.jpg"
-p2.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/timc_poster.jpg"})
 
-p3 = Play.new({
+
+p3 = Play.create!({
   title: "Children of a Lesser God",
   type: "Play",
   year: 2018,
   status: "Coming Soon",
   theater_info: "Studio 54: 254 W. 54th St.",
-  critic_consensus: ""})
-p3.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/coalg_poster.jpg"
-p3.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/coalg_poster.jpg"})
 
-p4 = Play.new({
+
+p4 = Play.create!({
   title: "To Kill A Mockingbird",
   type: "Play",
   year: 2017,
   status: "Coming Soon",
   theater_info: "Theater Information Coming Soon!",
-  critic_consensus: ""})
-p4.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tkamb_poster.jpg"
-p4.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tkamb_poster.jpg"})
 
-p5 = Play.new({
+
+p5 = Play.create!({
   title: "Farinelli and the King",
   type: "Play",
   year: 2018,
   status: "Coming Soon",
   theater_info: "Belasco Theater: 111 W. 44th St.",
-  critic_consensus: ""})
-p5.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/fatk_poster.jpg"
-p5.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/fatk_poster.jpg"})
 
-p6 = Play.new({
+p6 = Play.create!({
   title: "The Play That Goes Wrong",
   type: "Play",
   year: 2017,
   status: "Now Playing",
   theater_info: "Lyceum Theatre: 149 W. 45th St.",
-  critic_consensus: "This is a planned demolition (and an exceedingly well-executed one at that)...We wonder how on earth the performers are going to sustain this level of lunacy. Remarkably, they do."})
-p6.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tptgw_poster.jpg"
-p6.save!
+  critic_consensus: "This is a planned demolition (and an exceedingly well-executed one at that)...We wonder how on earth the performers are going to sustain this level of lunacy. Remarkably, they do.",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tptgw_poster.jpg"})
 
-p7 = Play.new({
+
+p7 = Play.create!({
   title: "Time and the Conways",
   type: "Play",
   year: 2017,
   status: "Now Playing",
   theater_info: "American Airlines Theatre: 227 W. 42nd St.",
-  critic_consensus: "Be patient with 'Time and the Conways,' because it takes a little while to get going. You will be happy you stuck around, though..."})
-p7.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tatc.jpg"
-p7.save!
+  critic_consensus: "Be patient with 'Time and the Conways,' because it takes a little while to get going. You will be happy you stuck around, though...",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/tatc.jpg"})
 
-p8 = Play.new({
+p8 = Play.create!({
   title: "M. Butterfly",
   type: "Play",
   year: 2017,
   status: "Now Playing",
   theater_info: "Cort Theatre: 138 W. 48th St.",
-  critic_consensus: ""})
-p8.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/butterfly_poster.png"
-p8.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/butterfly_poster.png"})
 
-p9 = Play.new({
+
+p9 = Play.create!({
   title: "Junk",
   type: "Play",
   year: 2017,
   status: "Now Playing",
   theater_info: "Vivian Beaumont Theater: 150 W. 65th St.",
-  critic_consensus: ""})
-p9.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/junk_poster.jpg"
-p9.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/junk_poster.jpg"})
 
-p10 = Play.new({
+
+p10 = Play.create!({
   title: "Meteor Shower",
   type: "Play",
   year: 2017,
   status: "Now Playing",
   theater_info: "Booth Theatre: 222 W. 45th St.",
-  critic_consensus: ""})
-p10.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/meteor_poster.jpg"
-p10.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/meteor_poster.jpg"})
 
-p11 = Play.new({
+
+p11 = Play.create!({
   title: "Latin History For Morons",
   type: "Play",
   year: 2017,
   status: "Now Playing",
   theater_info: "Studio 54: 254 W. 54th St.",
-  critic_consensus: "It's heartening to see that Leguizamo hasn't mellowed with middle age...The main takeaway from 'Latin History for Morons' is laughs, not learning..."})
-p11.image = "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/lhfm_poster.jpg"
-p11.save!
+  critic_consensus: "It's heartening to see that Leguizamo hasn't mellowed with middle age...The main takeaway from 'Latin History for Morons' is laughs, not learning...",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/lhfm_poster.jpg"})
+
 
 # --------------------------------------------------------------------------
 
-m1 = Musical.new({
+m1 = Musical.create({
   title: "Mean Girls",
   type: "Musical",
   year: 2018,
   status: "Coming Soon",
   theater_info: "August Wilson Theatre: 245 W. 52nd St.",
-  critic_consensus: ""})
-file = File.open('app/assets/show_posters/mg_poster.jpg')
-m1.image = file
-m1.save!
+  critic_consensus: "",
+  image: 'https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/mg_poster.jpg'})
 
-m2 = Musical.new({
+
+m2 = Musical.create!({
   title: "My Fair Lady",
   type: "Musical",
   year: 2018,
   status: "Coming Soon",
   theater_info: "Vivian Beaumont Theater: 150 W. 65th St.",
-  critic_consensus: ""})
-file = File.open('app/assets/show_posters/mfl_poster.jpg')
-m2.image = file
-m2.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/mfl_poster.jpg"})
 
-m3 = Musical.new({
+
+m3 = Musical.create!({
   title: "Carousel",
   type: "Musical",
   year: 2018,
   status: "Coming Soon",
   theater_info: "Imperial Theatre: 249 W. 45th St.",
-  critic_consensus: ""})
-file = File.open('app/assets/show_posters/carousel_poster.jpg')
-m3.image = file
-m3.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/carousel_poster.jpg"})
 
-m4 = Musical.new({
+m4 = Musical.create!({
   title: "Frozen",
   type: "Musical",
   year: 2018,
   status: "Coming Soon",
   theater_info: "St. James Theatre: 246 W. 44th St.",
-  critic_consensus: ""})
-file = File.open('app/assets/show_posters/frozen_poster.jpg')
-m4.image = file
-m4.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/frozen_poster.jpg"})
 
-m5 = Musical.new({
+
+m5 = Musical.create!({
   title: "SpongeBob SquarePants, The Broadway Musical",
   type: "Musical",
   year: 2017,
   status: "Coming Soon",
   theater_info: "Palace Theatre: 1564 Broadway",
-  critic_consensus: ""})
-file = File.open('app/assets/show_posters/sbsp_poster.jpg')
-m5.image = file
-m5.save!
+  critic_consensus: "",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/sbsp_poster.jpg"})
 
-m6 = Musical.new({
+m6 = Musical.create!({
   title: "The Phantom of the Opera",
   type: "Musical",
   year: 1988,
   status: "Now Playing",
   theater_info: "Majestic Theatre: 245 W. 44th St.",
-  critic_consensus: "The Phantom of Opera' not only looks as good as it did in 1988, but still holds the same thrills for audiences as the day it first bowed..."})
-file = File.open('app/assets/show_posters/phantom_poster.jpg')
-m6.image = file
-m6.save!
+  critic_consensus: "The Phantom of Opera' not only looks as good as it did in 1988, but still holds the same thrills for audiences as the day it first bowed...",
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/phantom_poster.jpg"})
 
-m7 = Musical.new({
+m7 = Musical.create!({
   title: "Chicago",
   type: "Musical",
   year: 1996,
   status: "Now Playing",
   theater_info: "Ambassador Theatre: 219 W. 49th St.",
-  critic_consensus: "Chicago is as good now as it's ever been--a heartening experience, a life-affirming dedication to the magic and art of theatre, and something that absolutely should not be missed"})
-file = File.open('app/assets/show_posters/chicago_poster.jpg')
-m7.image = file
-m7.save!
+  critic_consensus: "Chicago is as good now as it's ever been--a heartening experience, a life-affirming dedication to the magic and art of theatre, and something that absolutely should not be missed"
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/chicago_poster.jpg"})
 
-m8 = Musical.new({
+
+m8 = Musical.create!({
   title: "The Lion King",
   type: "Musical",
   year: 1997,
@@ -209,7 +196,7 @@ file = File.open('app/assets/show_posters/tlk_poster.png')
 m8.image = file
 m8.save!
 
-m9 = Musical.new({
+m9 = Musical.create!({
   title: "Wicked",
   type: "Musical",
   year: 2003,
@@ -220,7 +207,7 @@ file = File.open('app/assets/show_posters/wicked_poster.jpg')
 m9.image = file
 m9.save!
 
-m10 = Musical.new({
+m10 = Musical.create!({
   title: "The Book of Mormon",
   type: "Musical",
   year: 2011,
@@ -231,7 +218,7 @@ file = File.open('app/assets/show_posters/bom_poster.jpg')
 m10.image = file
 m10.save!
 
-m11 = Musical.new({
+m11 = Musical.create!({
   title: "Kinky Boots",
   type: "Musical",
   year: 2012,
@@ -242,7 +229,7 @@ file = File.open('app/assets/show_posters/kb_poster.jpg')
 m11.image = file
 m11.save!
 
-m12 = Musical.new({
+m12 = Musical.create!({
   title: "Beautiful",
   type: "Musical",
   year: 2013,
@@ -253,7 +240,7 @@ file = File.open('app/assets/show_posters/beautiful_poster.jpg')
 m12.image = file
 m12.save!
 
-m13 = Musical.new({
+m13 = Musical.create!({
   title: "Aladdin",
   type: "Musical",
   year: 2014,
@@ -264,7 +251,7 @@ file = File.open('app/assets/show_posters/aladdin_poster.png')
 m13.image = file
 m13.save!
 
-m14 = Musical.new({
+m14 = Musical.create!({
   title: "Hamilton",
   type: "Musical",
   year: 2015,
@@ -275,7 +262,7 @@ file = File.open('app/assets/show_posters/hamilton_poster.jpg')
 m14.image = file
 m14.save!
 
-m15 = Musical.new({
+m15 = Musical.create!({
   title: "School of Rock",
   type: "Musical",
   year: 2015,
@@ -286,7 +273,7 @@ file = File.open('app/assets/show_posters/rock_poster.jpg')
 m15.image = file
 m15.save!
 
-m16 = Musical.new({
+m16 = Musical.create!({
   title: "Waitress",
   type: "Musical",
   year: 2016,
@@ -297,7 +284,7 @@ file = File.open('app/assets/show_posters/waitress_poster.jpg')
 m16.image = file
 m16.save!
 
-m17 = Musical.new({
+m17 = Musical.create!({
   title: "Cats",
   type: "Musical",
   year: 2016,
@@ -308,7 +295,7 @@ file = File.open('app/assets/show_posters/cats_poster.jpg')
 m17.image = file
 m17.save!
 
-m18 = Musical.new({
+m18 = Musical.create!({
   title: "Dear Evan Hansen",
   type: "Musical",
   year: 2016,
@@ -319,7 +306,7 @@ file = File.open('app/assets/show_posters/deh_poster.jpg')
 m18.image = file
 m18.save!
 
-m19 = Musical.new({
+m19 = Musical.create!({
   title: "Come From Away",
   type: "Musical",
   year: 2017,
@@ -330,7 +317,7 @@ file = File.open('app/assets/show_posters/cfa_poster.jpg')
 m19.image = file
 m19.save!
 
-m20 = Musical.new({
+m20 = Musical.create!({
   title: "Come From Away",
   type: "Musical",
   year: 2017,
@@ -341,7 +328,7 @@ file = File.open('app/assets/show_posters/saigon_poster.jpg')
 m20.image = file
 m20.save!
 
-m21 = Musical.new({
+m21 = Musical.create!({
   title: "Hello Dolly",
   type: "Musical",
   year: 2017,
@@ -352,7 +339,7 @@ file = File.open('app/assets/show_posters/dolly_poster.jpg')
 m21.image = file
 m21.save!
 
-m22 = Musical.new({
+m22 = Musical.create!({
   title: "Charlie and the Chocolate Factory",
   type: "Musical",
   year: 2017,
@@ -363,7 +350,7 @@ file = File.open('app/assets/show_posters/charlie_poster.jpg')
 m22.image = file
 m22.save!
 
-m23 = Musical.new({
+m23 = Musical.create!({
   title: "Anastasia",
   type: "Musical",
   year: 2017,
