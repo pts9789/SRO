@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 ActiveRecord::Base.transaction do
 
-u1 = User.create!({email: "guest", username: "guest", password:"arizona"})
-
 p1 = Play.create!({
   title: "Harry Potter and the Cursed Child- Parts I and II",
   type: "Play",
