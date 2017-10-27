@@ -19,11 +19,30 @@
    transform: translate(-50%, -50%);
    background: white;
    border-radius: 5px 5px 0 0 ;
+   font-family: 'Heebo', sans-serif;
  }
 
+ .modal-close-x {
+   display: flex;
+   color: #c2c2c2;
+   cursor: pointer;
+   font-weight: 400;
+   font-size: 15px;
+   margin:0 5px;
+   padding: 10px;
+   font-family: 'ABeeZee', sans-serif;
+ }
+
+
  .modal-form-box {
-   outline: 1px solid darkgray;
-   padding: 30px;
+   padding: 20px;
+ }
+
+ .session-errors{
+   font-size: 10px;
+   font-weight: lighter;
+   color: red;
+   margin-left: 10px;
  }
 
  .session-form-container {
@@ -32,28 +51,37 @@
    margin-top: 50px;
  }
 
-  .session-form-container, h2 {
-    margin-left: 10px;
-    font-weight: 400;
-  }
-
- .session-form {
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
- }
-
-.session-form, input, label {
-  display: block;
-  margin: 0 auto;
-  padding: 5px;
+.session-form-header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: .2px solid #E0E0E0;
 }
 
-.session-errors{
-  font-size: 10px;
+.session-form-title {
+  display: flex;
+  margin:0 5px;
+  font-weight: 600;
+  padding: 10px;
+  color: #343434;
+}
+
+.session-form-input {
+  display: block;
+  height: 34px;
+  padding: 0px 10px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #555;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  font-family: 'ABeeZee', sans-serif;
+  margin: 0 auto;
   font-weight: lighter;
-  color: red;
-  margin-left: 10px;
+}
+.session-form-label {
+  font-weight: bolder;
+  padding: 10px
 }
 
 // styling help from Aa benchBnB

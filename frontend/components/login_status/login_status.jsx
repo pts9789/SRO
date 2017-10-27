@@ -3,8 +3,8 @@ import React from 'react';
 const noCurrentUser = (showModal) => {
   return(
       <ul className="session-list">
-        <li onClick={ (e) => showModal("login")}>SIGN IN</li>
-        <li onClick={ (e) => showModal("signup")}>SIGN UP</li>
+        <li className="login-status" onClick={ (e) => showModal("signup")}>SIGN UP</li>
+        <li className="login-status" onClick={ (e) => showModal("login")}>LOG IN</li>
       </ul>
   );
 };
@@ -12,8 +12,8 @@ const noCurrentUser = (showModal) => {
 const userLoggedIn = (currentUser, logout) => {
   return(
       <ul className="session-list">
-        <li>{currentUser.username}</li>
-        <li onClick={logout}>LOG OUT</li>
+        <li className="login-status" >{currentUser.username}</li>
+        <li className="login-status" onClick={logout}>LOG OUT</li>
       </ul>
   );
 };

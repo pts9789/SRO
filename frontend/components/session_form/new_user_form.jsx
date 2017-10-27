@@ -39,7 +39,7 @@ class NewUserForm extends React.Component {
     render() {
       return(
         <div className="modal-component session-form-container">
-          <h2>SIGN UP</h2>
+          <h2 className="session-form-header">SIGN UP</h2>
           {this.renderErrors()}
           <form className="modal-form-box" onSubmit={this.handleSubmit}>
             <div className="session-form">

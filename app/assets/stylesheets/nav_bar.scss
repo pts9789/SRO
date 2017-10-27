@@ -1,14 +1,15 @@
 .nav-bar {
   display: flex;
-  background-color: #009900;
+  background-color: #3b9326;
   justify-content: space-between;
+  height: 85px;
 }
 
 
 .logo {
   height: 55px;
   width: auto;
-  margin: 2px 0 5px 15px;
+  margin: 10px 0 5px 20px;
 }
 
 .session-list {
@@ -24,6 +25,6 @@
   font-size: 12px;
 }
 
-.session-list, li :hover {
+.session-list li:hover {
   cursor: pointer;
 }

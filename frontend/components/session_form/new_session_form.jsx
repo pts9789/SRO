@@ -38,24 +38,30 @@ class NewSessionForm extends React.Component {
   render() {
     return(
       <div className="modal-component session-form-container">
-        <h2>SIGN IN</h2>
+        <div className="session-form-header">
+          <p className="session-form-title">LOG IN</p>
+          <p className="modal-close-x" onClick={ (e) => this.props.hideModal()}>x</p>
+        </div>
         {this.renderErrors()}
         <form className="modal-form-box" onSubmit={this.handleSubmit}>
-          <div className="session-form">
-            <label>Username:
+          <div>
+            <label className="session-form-label" htmlFor="username">Username</label>
               <input
                 type="text"
+                name="username"
+                placeholder="Username"
                 value={this.state.username}
+                className="session-form-input"
                 onChange={this.update('username')}/>
-            </label>
-
-            <label>Password:
+            <br/>
+            <label className="session-form-label" htmlFor="password">Password</label>
               <input
                 type="password"
+                name="password"
+                placeholder="Password"
                 value={this.state.password}
+                className="session-form-input"
                 onChange={this.update('password')}/>
-            </label>
-
             <br/>
             <input
               type="submit"
