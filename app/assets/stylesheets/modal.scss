@@ -19,7 +19,8 @@
    transform: translate(-50%, -50%);
    background: white;
    border-radius: 5px 5px 0 0 ;
-   font-family: 'Heebo', sans-serif;
+   font-family: 'Source Sans Pro', sans-serif;
+
  }
 
  .modal-close-x {
@@ -27,15 +28,16 @@
    color: #c2c2c2;
    cursor: pointer;
    font-weight: 400;
-   font-size: 15px;
+   font-size: 17px;
+   font-family: 'Varela Round', sans-serif;
    margin:0 5px;
-   padding: 10px;
-   font-family: 'ABeeZee', sans-serif;
+   padding: 7px;
  }
 
 
  .modal-form-box {
-   padding: 20px;
+   padding: 10px 20px 20px 20px;
+   width: 250px;
  }
 
  .session-errors{
@@ -60,13 +62,14 @@
 .session-form-title {
   display: flex;
   margin:0 5px;
-  font-weight: 600;
-  padding: 10px;
+  padding:  15px 0 15px 10px;
   color: #343434;
+  font-weight: 600;
 }
 
 .session-form-input {
   display: block;
+  width: 90%;
   height: 34px;
   padding: 0px 10px;
   font-size: 16px;
@@ -75,13 +78,35 @@
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 4px;
-  font-family: 'ABeeZee', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 0 auto;
   font-weight: lighter;
 }
 .session-form-label {
-  font-weight: bolder;
-  padding: 10px
+  display: flex;
+  font-weight: 600;
+  padding: 10px 0 5px 0;
 }
 
+.session-form-button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 10px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 200;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 1.25;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: white;
+}
+.session-form-button:hover{
+  background-color: #286090;
+  border-color: #204d74;
+}
 // styling help from Aa benchBnB
