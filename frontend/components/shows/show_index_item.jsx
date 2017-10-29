@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-const ShowIndexItem = ({ show }) => (
+const ShowIndexItem = ({ show, router, history }) => (
   <li>
-    <span>{show.title}</span>
+    <Link to={`/shows/${show.id}`}>{show.title}</Link>
   </li>
 );
 

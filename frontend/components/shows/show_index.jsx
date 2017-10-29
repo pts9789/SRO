@@ -11,7 +11,7 @@ class ShowIndex extends React.Component {
   render() {
     return(
       <div className="main-page-show-lists">
-        <div className="main-page-plays">
+        <div className="main-page-list-container">
           <div className="main-page-list-header">PLAYS</div>
           <ul>
             {
@@ -20,8 +20,9 @@ class ShowIndex extends React.Component {
               ))
             }
           </ul>
+          
         </div>
-        <div className="main-page-musicals">
+        <div className="main-page-list-container">
           <div className="main-page-list-header">MUSICALS</div>
           <ul>
             {

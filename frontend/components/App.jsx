@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './nav_bar';
 import Footer from './footer';
 import MyModal from './myModal';
-import ShowIndexContainer from './shows/show_index_container';
+import MainPage from './main_page'
 import { connect } from 'react-redux';
 
 const App = ({modal, hideModal}) => (
@@ -11,8 +11,8 @@ const App = ({modal, hideModal}) => (
         <NavBar />
       </header>
 
-      <h1 className="main-page-header-text">Now On Broadway</h1>
-      <ShowIndexContainer />
+      <MainPage />
+
       <footer>
         <Footer />
       </footer>

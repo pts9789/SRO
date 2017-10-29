@@ -14,36 +14,28 @@ body {
   margin: 0;
 }
 
-.main-page-header-text{
-  font-weight: 400;
-  font-size: 40px;
-  font-family: 'Limelight', cursive;
-}
-
 .main-page-show-lists {
   display: flex;
   align-items: flex-start;
   width: auto;
+  background-color: white;
+  border-bottom: .5px solid #F0F0F0	;
 }
 
 .main-page-list-header{
-  text-decoration: underline;
+  display: flex;
+  justify-content: flex-start;
   font-weight: 800;
-  padding: 30px;
+  font-family: 'Limelight', cursive;
+  padding: 20px;
 }
 
-.main-page-plays {
+.main-page-list-container {
   display: flex;
   flex-direction: column;
-  background-color: white;
   padding: 15px;
-
 }
 
-.main-page-musicals {
-  display: flex;
-  flex-direction: column;
-  flex: left;
-  background-color: white;
-  padding: 15px;
+.main-page-list-container:last-child {
+  border-left: .5px solid #F0F0F0	;
 }
