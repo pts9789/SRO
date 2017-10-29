@@ -17,5 +17,33 @@ body {
 .main-page-header-text{
   font-weight: 400;
   font-size: 40px;
-  font-family: sans-serif;
+  font-family: 'Limelight', cursive;
+}
+
+.main-page-show-lists {
+  display: flex;
+  align-items: flex-start;
+  width: auto;
+}
+
+.main-page-list-header{
+  text-decoration: underline;
+  font-weight: 800;
+  padding: 30px;
+}
+
+.main-page-plays {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 15px;
+
+}
+
+.main-page-musicals {
+  display: flex;
+  flex-direction: column;
+  flex: left;
+  background-color: white;
+  padding: 15px;
 }

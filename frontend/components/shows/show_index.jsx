@@ -12,7 +12,7 @@ class ShowIndex extends React.Component {
     return(
       <div className="main-page-show-lists">
         <div className="main-page-plays">
-          <div className="main-page-list-header"></div>
+          <div className="main-page-list-header">PLAYS</div>
           <ul>
             {
               this.props.plays.map((show) => (
@@ -20,14 +20,17 @@ class ShowIndex extends React.Component {
               ))
             }
           </ul>
-          </div>
-        <ul>
-          {
-            this.props.musicals.map((show) => (
-              <ShowIndexItem key={show.id} show={show} />
-            ))
-          }
-        </ul>
+        </div>
+        <div className="main-page-musicals">
+          <div className="main-page-list-header">MUSICALS</div>
+          <ul>
+            {
+              this.props.musicals.map((show) => (
+                <ShowIndexItem key={show.id} show={show} />
+              ))
+            }
+          </ul>
+        </div>
       </div>
     );
   }

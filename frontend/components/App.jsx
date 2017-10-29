@@ -11,7 +11,7 @@ const App = ({modal, hideModal}) => (
         <NavBar />
       </header>
 
-      <h1 className="main-page-header-text">Now On Broadway!</h1>
+      <h1 className="main-page-header-text">Now On Broadway</h1>
       <ShowIndexContainer />
       <footer>
         <Footer />
