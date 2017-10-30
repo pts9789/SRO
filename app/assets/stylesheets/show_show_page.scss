@@ -1,0 +1,79 @@
+.show-show-page {
+  display: flex;
+  background-color: white;
+
+}
+
+.show-container-for-title-image {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 5px;
+}
+
+.show-container-upper-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.show-container-for-theater-status {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-show-bottom-right-content {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.show-container-for-critic-consensus{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff7cd;
+  border: 1px solid #F0F0F0;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0 10px 10px 10px;
+}
+
+.show-container-for-image {
+  display:flex;
+  flex-direction: column;
+}
+
+.show-show-image {
+  width: auto;
+  height: 235px;
+}
+
+.show-container-for-image {
+  display:flex;
+  flex-direction: column;
+}
+
+.show-show-title {
+  font-weight: 800;
+  font-family: 'Limelight', cursive;
+  width: auto;
+}
+
+.show-show-info {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.critic_consensus-header{
+  display: flex;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  padding: 5px 5px 0 5px;
+}
+
+.show-container-for-critic-consensus p{
+  padding: 0 5px;
+  margin:0;
+  font-size: 12px;
+}

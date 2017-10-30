@@ -19,12 +19,27 @@ class ShowShow extends React.Component {
 
   render() {
     return(
-      <div>
-        <img src={this.state.image_url} />
-        <h1>{this.state.title}</h1>
-        <span>{this.state.status}</span>
-        <span>{this.state.theater_info}</span>
-        <p>{this.state.critic_consensus}</p>
+      <div className="show-show-page">
+        <div className="show-container-for-title-image">
+          <div className="show-container-for-image">
+            <img className="show-show-image"src={this.state.image_url} />
+          </div>
+          <div className="show-container-for-title">
+            <span className="show-show-title">{this.state.title}</span>
+          </div>
+        </div>
+        <div className="show-container-upper-content">
+          <div className="show-container-for-theater-status">
+            <span className="show-show-info">{this.state.status}</span>
+            <span className="show-show-info">{this.state.theater_info}</span>
+          </div>
+        </div>
+        <div className="show-show-bottom-right-content" >
+          <div className="show-container-for-critic-consensus">
+            <span className="critic_consensus-header">Critic Consensus:</span>
+            <p>{this.state.critic_consensus}</p>
+          </div>
+        </div>
       </div>
     );
   }
