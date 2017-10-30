@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 ActiveRecord::Base.transaction do
 
+User.destroy_all
+Show.destroy_all
+
 u1= User.create!({email:"guest", username:"guest", password:"arizona"})
 u2= User.create!({email:"patrick", username:"patrick", password:"arizona"})
 
