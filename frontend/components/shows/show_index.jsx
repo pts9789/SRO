@@ -20,7 +20,7 @@ class ShowIndex extends React.Component {
               ))
             }
           </ul>
-          
+
         </div>
         <div className="main-page-list-container">
           <div className="main-page-list-header">MUSICALS</div>

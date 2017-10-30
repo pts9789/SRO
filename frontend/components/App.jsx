@@ -19,16 +19,4 @@ const App = ({modal, hideModal}) => (
     </div>
 );
 
-const mapStateToProps = ({ ui: { modal }}) => {
-  return {
-    modal,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    hideModal: () => dispatch(hideModal())
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

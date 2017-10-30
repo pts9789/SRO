@@ -14,7 +14,7 @@ import NewUserFormContainer from './session_form/new_user_form_container';
 const NavBar = ({ modal, hideModal }) => (
   <div className="nav-bar">
     <img className="logo" src={window.images.logo} />
-  
+
     <LoginStatusContainer />
     <MyModal component={ modal === 'login' ? NewSessionFormContainer : NewUserFormContainer}
       modal={modal}

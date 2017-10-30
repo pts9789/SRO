@@ -7,9 +7,9 @@ import ShowShowContainer from './shows/show_show_container';
 
 const MainPage = () => (
     <div>
-      <ShowIndexContainer />
       <Switch>
-        <Route path="/shows/:showId" component={ShowShowContainer} />
+        <Route exact path="/" component={ShowIndexContainer}/>
+        <Route exact path="/shows/:showId" component={ShowShowContainer} />
       </Switch>
     </div>
 );
