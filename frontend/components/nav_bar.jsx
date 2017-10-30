@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import MyModal from './myModal';
 import { hideModal } from '../actions/modal_actions';
@@ -11,16 +12,18 @@ import NewUserFormContainer from './session_form/new_user_form_container';
 // When you add in the Modal for the user review, use similar
 // logic on main page.
 
-const NavBar = ({ modal, hideModal }) => (
-  <div className="nav-bar">
-    <img className="logo" src={window.images.logo} />
+const NavBar = ({ modal, hideModal }) => {
+  return(
+    <div className="nav-bar">
+      <img className="logo" src={window.images.logo} />
 
-    <LoginStatusContainer />
-    <MyModal component={ modal === 'login' ? NewSessionFormContainer : NewUserFormContainer}
-      modal={modal}
-      hideModal={hideModal} />
-  </div>
-);
+      <LoginStatusContainer />
+      <MyModal component={ modal === 'login' ? NewSessionFormContainer : NewUserFormContainer}
+        modal={modal}
+        hideModal={hideModal} />
+    </div>
+  );
+};
 
 const mapStateToProps = ({ ui: { modal }}) => {
   return {

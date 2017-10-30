@@ -20,7 +20,11 @@ class ShowShow extends React.Component {
   render() {
     return(
       <div>
+        <img src={this.state.image_url} />
         <h1>{this.state.title}</h1>
+        <span>{this.state.status}</span>
+        <span>{this.state.theater_info}</span>
+        <p>{this.state.critic_consensus}</p>
       </div>
     );
   }
