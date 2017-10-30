@@ -10,8 +10,17 @@ ActiveRecord::Base.transaction do
 User.destroy_all
 Show.destroy_all
 
-u1= User.create!({email:"guest", username:"guest", password:"arizona"})
-u2= User.create!({email:"patrick", username:"patrick", password:"arizona"})
+u1= User.create!({email:"guest@guest.com", username:"guest", password:"arizona"})
+u2= User.create!({email:"patrick@patrick.com", username:"patrick", password:"arizona"})
+u3= User.create!({email:"jenny@jenny.com", username:"jenny", password:"arizona"})
+u4= User.create!({email:"stephanie@stephanie.com", username:"stephanie", password:"arizona"})
+u5= User.create!({email:"jamie@jamie.com", username:"jamie", password:"arizona"})
+u6= User.create!({email:"mark@mark.com", username:"mark", password:"arizona"})
+u7= User.create!({email:"ken@ken.com", username:"ken", password:"arizona"})
+u8= User.create!({email:"chris@chris.com", username:"chris", password:"arizona"})
+u9= User.create!({email:"karl@karl.com", username:"karl", password:"arizona"})
+u10= User.create!({email:"michael@michael.com", username:"michael", password:"arizona"})
+u11= User.create!({email:"charlie@charlie.com", username:"charlie", password:"arizona"})
 
 p1 = Play.create!({
   title: "Harry Potter and the Cursed Child- Parts I and II",

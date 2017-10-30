@@ -50,6 +50,7 @@ class NewUserForm extends React.Component {
                 <input
                   type="text"
                   name="email"
+                  placeholder="Email"
                   value={this.state.email}
                   className="session-form-input"
                   onChange={this.update('email')} />
@@ -58,6 +59,7 @@ class NewUserForm extends React.Component {
                 <input
                   type="text"
                   name="username"
+                  placeholder="Username"
                   value={this.state.username}
                   className="session-form-input"
                   onChange={this.update('username')} />
@@ -66,6 +68,7 @@ class NewUserForm extends React.Component {
                 <input
                   type="password"
                   name="password"
+                  placeholder="Password"
                   value={this.state.password}
                   className="session-form-input"
                   onChange={this.update('password')} />
