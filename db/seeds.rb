@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 ActiveRecord::Base.transaction do
 
+u1= User.create!({email:"guest", username:"guest", password:"arizona"})
+u2= User.create!({email:"patrick", username:"patrick", password:"arizona"})
+
 p1 = Play.create!({
   title: "Harry Potter and the Cursed Child- Parts I and II",
   type: "Play",
@@ -111,7 +114,7 @@ p11 = Play.create!({
   status: "Now Playing",
   theater_info: "Studio 54: 254 W. 54th St.",
   critic_consensus: "It's heartening to see that Leguizamo hasn't mellowed with middle age...The main takeaway from 'Latin History for Morons' is laughs, not learning...",
-  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/lhfm_poster.jpg"})
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/morons_poster.jpg"})
 
 
 # --------------------------------------------------------------------------
@@ -219,7 +222,7 @@ m11 = Musical.create!({
   status: "Now Playing",
   theater_info: "Al Hirschfeld Theatre: 302 W. 45th St.",
   critic_consensus: "There are few things theatergoers love more than musicals about persistence and self-acceptance. And since Cyndi Lauper teamed up with book writer Harvey Fierstein, the man behind “La Cage aux Folles,” rahrah empowerment gushes out of the likable but heavy-handed show as if from a broken pipe.",
-  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/kb_poster.jpg"})
+  image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/kinky_poster.jpg"})
 
 
 m12 = Musical.create!({
