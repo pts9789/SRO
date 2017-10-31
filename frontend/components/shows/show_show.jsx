@@ -44,7 +44,7 @@ class ShowShow extends React.Component {
         </div>
         <div className="show-show-right-side-content">
           <div className="show-show-upper-right-content">
-            <img src={myIcon} />
+            <img className="critic-score-icon" src={myIcon} />
             <div>{this.state.show_score}</div>
           </div>
           <div className="show-show-bottom-right-content" >
