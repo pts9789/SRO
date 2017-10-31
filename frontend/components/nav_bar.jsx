@@ -28,9 +28,9 @@ const NavBar = ({ modal, hideModal, fetchShow }) => {
 
         <div className="trending-bar-under-nav">
           <div className="trending-text">TRENDING ON SRO</div>
-          <Link to="/shows/93" className="trending-show" onClick={ (e) => fetchShow(93)} >HAMILTON</Link>
-          <Link to="/shows/97" className="trending-show" onClick={ (e) => fetchShow(97)} >DEAR EVAN HANSEN</Link>
-          <Link to="/shows/89" className="trending-show" onClick={ (e) => fetchShow(89)} >THE BOOK OF MORMON</Link>
+          <Link to="/shows/25" className="trending-show" onClick={ (e) => fetchShow(25)} >HAMILTON</Link>
+          <Link to="/shows/29" className="trending-show" onClick={ (e) => fetchShow(29)} >DEAR EVAN HANSEN</Link>
+          <Link to="/shows/21" className="trending-show" onClick={ (e) => fetchShow(21)} >THE BOOK OF MORMON</Link>
         </div>
     </div>
   );
