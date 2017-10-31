@@ -22,7 +22,4 @@ class Review < ApplicationRecord
     foreign_key: :show_id,
     class_name: 'Show'
 
-  belongs_to :author,
-    foreign_key: :author_id,
-    class_name: 'User'
 end

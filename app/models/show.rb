@@ -24,6 +24,16 @@ class Show < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   has_many :reviews,
+  foreign_key: :show_id,
+  class_name: 'Review'
+
+  has_many :critic_reviews,
     foreign_key: :show_id,
-    class_name: 'Review'
+    class_name: 'CriticReview'
+
+  has_many :user_reviews,
+    foreign_key: :show_id,
+    class_name: 'UserReview'
+
+
 end

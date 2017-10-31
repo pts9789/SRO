@@ -8,7 +8,9 @@ const showsReducer = (state = {}, action) => {
     case RECEIVE_ALL_SHOWS:
       return merge({}, state, action.shows);
     case RECEIVE_SHOW:
-      const show = action.payload;
+      const show = action.payload.show;
+      show.show_score = parseFloat(show.show_score);
+      show.review_ids = action.payload.reviews.map((review) => review.id);
       return merge({}, state, {[show.id]: show});
     default:
       return state;
