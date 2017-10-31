@@ -18,6 +18,14 @@ class ShowShow extends React.Component {
   }
 
   render() {
+    let myIcon;
+    if (this.state.show_score > 84) {
+      (myIcon = window.images.sro_icon);
+    } else if (this.state.show_score > 60) {
+      (myIcon = window.images.comedy_icon);
+    } else {
+      (myIcon = window.images.tragedy_icon);
+    }
     return(
       <div className="show-show-page">
         <div className="show-container-for-title-image">
@@ -34,10 +42,16 @@ class ShowShow extends React.Component {
             <span className="show-show-info">{this.state.theater_info}</span>
           </div>
         </div>
-        <div className="show-show-bottom-right-content" >
-          <div className="show-container-for-critic-consensus">
-            <span className="critic_consensus-header">Critic Consensus:</span>
-            <p>{this.state.critic_consensus}</p>
+        <div className="show-show-right-side-content">
+          <div className="show-show-upper-right-content">
+            <img src={myIcon} />
+            <div>{this.state.show_score}</div>
+          </div>
+          <div className="show-show-bottom-right-content" >
+            <div className="show-container-for-critic-consensus">
+              <span className="critic_consensus-header">Critic Consensus:</span>
+              <p>{this.state.critic_consensus}</p>
+            </div>
           </div>
         </div>
       </div>
