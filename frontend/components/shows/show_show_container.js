@@ -6,7 +6,7 @@ const mapStateToProps = (state, ownProps) => {
   const show = state.entities.shows[ownProps.match.params.showId];
   let criticReviews = [];
   let userReviews = [];
-  if (show) {
+  if (show.hasOwnProperty("critic_review_ids")) {
     criticReviews = show.critic_review_ids.map(id => {
       return state.entities.reviews[id];
     });

@@ -20,7 +20,6 @@ class ShowShow extends React.Component {
   }
 
   render() {
-
     let criticIcon;
     if (this.state.critic_score > 84) {
       (criticIcon = window.images.sro_icon);
