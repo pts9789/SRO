@@ -26,6 +26,13 @@ class ShowShow extends React.Component {
     } else {
       (myIcon = window.images.tragedy_icon);
     }
+
+    let score;
+    if (!this.state.show_score) {
+      (score = "N/A");
+    } else {
+      (score = `${this.state.show_score}%`);
+    }
     return(
       <div className="show-show-page">
         <div className="show-container-for-title-image">
@@ -43,15 +50,28 @@ class ShowShow extends React.Component {
           </div>
         </div>
         <div className="show-show-right-side-content">
-          <div className="show-show-upper-right-content">
-            <img className="critic-score-icon" src={myIcon} />
-            <div>{this.state.show_score}</div>
+          <div className="show-show-upper-right-content-container">
+            <div className="show-show-upper-right-content1-container">
+              <div className="show-show-upper-right-content-header">SRO SCORE</div>
+              <div className="show-show-upper-right-content1">
+                <div className="show-container-for-critic-score">
+                  <img className="show-critic-score-icon" src={myIcon} />
+                  <div className="show-critic-score">{score}</div>
+                </div>
+                <div className="show-container-for-critic-consensus">
+                  <span className="critic_consensus-header">Critic Consensus:</span>
+                  <p>{this.state.critic_consensus}</p>
+                </div>
+              </div>
+            </div>
+            <div className="show-show-upper-right-content2-container">
+              <div className="show-show-upper-right-content-header">USER SCORE</div>
+              <div className="show-show-upper-right-content2">
+
+              </div>
+            </div>
           </div>
           <div className="show-show-bottom-right-content" >
-            <div className="show-container-for-critic-consensus">
-              <span className="critic_consensus-header">Critic Consensus:</span>
-              <p>{this.state.critic_consensus}</p>
-            </div>
           </div>
         </div>
       </div>
