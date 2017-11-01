@@ -17,7 +17,7 @@ const ShowReviewItem = ({ review, router, history }) => {
       <div className="show-review-content">
         <div className="show-review-text"> <img className="show-review-score-icon" src={myIcon} /> {review.body}</div>
         <div className="show-review-score">{review.score}</div>
-        <a href={review.link_to_review} className="show-review-link">Full Review...</a>
+        <a href={review.link_to_review} target="_blank" className="show-review-link">Full Review...</a>
       </div>
 
       <div className="show-review-author-info">
