@@ -83,7 +83,7 @@ class ShowShow extends React.Component {
 
         <div className="show-reviews-lists">
           <div className="show-review-list-container">
-            <div className="show-review-list-header">CRITIC REVIEWS</div>
+            <div className="show-review-list-header">CRITIC REVIEWS FOR {this.state.title}</div>
             <ul className="show-review-list-critics">
               {
                 this.props.criticReviews.map((review) => (

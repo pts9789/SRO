@@ -3,7 +3,7 @@ import ShowShow from './show_show';
 import { fetchShow } from '../../actions/shows_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  const show = state.entities.shows[ownProps.match.params.showId];
+  const show = state.entities.shows[ownProps.match.params.showId] || {};
   let criticReviews = [];
   let userReviews = [];
   if (show.hasOwnProperty("critic_review_ids")) {
