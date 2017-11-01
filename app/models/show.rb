@@ -30,10 +30,11 @@ class Show < ApplicationRecord
   has_many :critic_reviews,
     foreign_key: :show_id,
     class_name: 'CriticReview'
+    # -> { where type: 'CriticReview' }
 
   has_many :user_reviews,
     foreign_key: :show_id,
     class_name: 'UserReview'
-
+    # -> { where type: 'CriticReview' }
 
 end

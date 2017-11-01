@@ -14,11 +14,13 @@ class ShowShow extends React.Component {
   componentDidMount() {
     this.props.fetchShow(this.props.match.params.showId);
   }
+
   componentWillReceiveProps(newProps){
     this.setState(newProps.show);
   }
 
   render() {
+
     let criticIcon;
     if (this.state.critic_score > 84) {
       (criticIcon = window.images.sro_icon);
@@ -85,7 +87,7 @@ class ShowShow extends React.Component {
             <div className="show-review-list-header">CRITIC REVIEWS</div>
             <ul className="show-review-list-critics">
               {
-                this.props.critic_reviews.map((review) => (
+                this.props.criticReviews.map((review) => (
                   <ShowReviewItem key={review.id} review={review} />
                 ))
               }
@@ -96,7 +98,7 @@ class ShowShow extends React.Component {
             <div className="show-review-list-header">USER REVIEWS</div>
             <ul className="show-review-list-critics">
               {
-                this.props.user_reviews.map((review) => (
+                this.props.userReviews.map((review) => (
                   <ShowReviewItem key={review.id} review={review} />
                 ))
               }

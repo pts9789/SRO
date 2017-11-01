@@ -7,11 +7,7 @@ const reviewsReducer = (state = {}, action) => {
   switch (action.type) {
 
     case RECEIVE_SHOW:
-      reviews = {};
-      action.payload.reviews.forEach((review) =>(
-        reviews[review.id] = review
-      ));
-      return merge({}, state, reviews);
+      return merge({}, state, action.payload.reviews);
     default:
       return state;
 

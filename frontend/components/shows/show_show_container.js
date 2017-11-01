@@ -3,16 +3,22 @@ import ShowShow from './show_show';
 import { fetchShow } from '../../actions/shows_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  const show = state.entities.shows[ownProps.match.params.showId];
+  let criticReviews = [];
+  let userReviews = [];
+  if (show) {
+    criticReviews = show.critic_review_ids.map(id => {
+      return state.entities.reviews[id];
+    });
+    userReviews = show.user_review_ids.map(id => {
+      return state.entities.reviews[id];
+    });
+  }
 
   return({
-    show: state.entities.shows[ownProps.match.params.showId],
-    critic_reviews: Object.values(state.entities.reviews).filter((review) => {
-      return review.type === "CriticReview";
-    }),
-    user_reviews: Object.values(state.entities.reviews).filter((review) => {
-      return review.type === "UserReview";
-    }),
-    
+    show,
+    criticReviews,
+    userReviews,
   });
 };
 

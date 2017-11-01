@@ -7,12 +7,12 @@ const showsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_SHOWS:
       const shows = action.payload.shows;
-
       return merge({}, state, action.payload.shows);
+
     case RECEIVE_SHOW:
       const show = action.payload.show;
-      show.review_ids = action.payload.reviews.map((review) => review.id);
       return merge({}, state, {[show.id]: show});
+
     default:
       return state;
 
