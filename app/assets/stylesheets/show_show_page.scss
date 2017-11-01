@@ -1,7 +1,14 @@
 .show-show-page {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: white;
+}
 
+.show-information-content {
+  display: flex;
+  background-color: white;
 }
 
 .show-container-for-title-image {
@@ -152,4 +159,12 @@
   margin:0 5px 10px 0;
   font-size: 12px;
   width: 200px;
+}
+
+
+
+.show-review-score-icon {
+  width: auto;
+  height: 25px;
+  margin-right: 5px;
 }

@@ -6,7 +6,13 @@ const mapStateToProps = (state, ownProps) => {
 
   return({
     show: state.entities.shows[ownProps.match.params.showId],
-    reviews: state.entities.reviews
+    critic_reviews: Object.values(state.entities.reviews).filter((review) => {
+      return review.type === "CriticReview";
+    }),
+    user_reviews: Object.values(state.entities.reviews).filter((review) => {
+      return review.type === "UserReview";
+    }),
+    
   });
 };
 

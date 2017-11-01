@@ -1,7 +1,8 @@
 json.show do
   json.extract! @show, :id, :title, :type, :year, :status, :theater_info, :critic_consensus
   json.image_url asset_path(@show.image.url)
-  json.show_score @show.critic_reviews.average(:score).to_i
+  json.critic_score @show.critic_reviews.average(:score).to_i
+  json.user_score @show.user_reviews.average(:score).to_i
 end
 
 json.reviews do
