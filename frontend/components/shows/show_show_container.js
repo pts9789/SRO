@@ -3,8 +3,10 @@ import ShowShow from './show_show';
 import { fetchShow } from '../../actions/shows_actions';
 
 const mapStateToProps = (state, ownProps) => {
+
   return({
-    show: state.entities.shows[ownProps.match.params.showId]
+    show: state.entities.shows[ownProps.match.params.showId],
+    reviews: state.entities.reviews
   });
 };
 
