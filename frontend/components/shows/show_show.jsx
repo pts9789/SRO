@@ -94,8 +94,8 @@ class ShowShow extends React.Component {
 
           </div>
           <div className="show-review-list-container">
-            <div className="show-review-list-header">USER REVIEWS</div>
-            <ul className="show-review-list-critics">
+            <ul className="show-review-list-users">
+              <div className="show-review-list-header">USER REVIEWS</div>
               {
                 this.props.userReviews.map((review) => (
                   <ShowReviewItem key={review.id} review={review} />

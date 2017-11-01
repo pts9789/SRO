@@ -9,6 +9,7 @@
 .show-information-content {
   display: flex;
   background-color: white;
+  width: 100%
 }
 
 .show-container-for-title-image {
@@ -61,6 +62,7 @@
   font-weight: 800;
   font-family: 'Limelight', cursive;
   max-width: 100%;
+  font-size: 25px;
 }
 
 .show-show-info {
@@ -159,12 +161,4 @@
   margin:0 5px 10px 0;
   font-size: 12px;
   width: 200px;
-}
-
-
-
-.show-review-score-icon {
-  width: auto;
-  height: 25px;
-  margin-right: 5px;
 }

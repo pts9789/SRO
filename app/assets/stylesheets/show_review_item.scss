@@ -1,0 +1,112 @@
+.show-reviews-lists {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  cursor: default;
+}
+
+.show-review-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-review-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  max-width: 200px;
+  background-color: #feee00;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+.show-review-list-critics{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.show-review-list-users {
+  display: flex;
+}
+
+.show-review-item {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 0 20px 20px 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.show-review-content {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #cde9ea;
+  border-radius: 80px 80px 5px 80px;
+  padding: 12px;
+  width: 500px;
+  font-size: 20px;
+}
+
+.review-score-icon-text-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.show-review-score-icon {
+  display: flex;
+  width: auto;
+  height: 40px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.show-review-text {
+  display: flex;
+  margin: 0;
+  font-size: 20;
+}
+
+.review-score-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.show-review-score {
+  display: flex;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.show-review-link {
+  display: flex;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #3499d1;
+  font-size: 16px;
+}
+
+.show-review-link:hover {
+  color: #53bbf1;
+}
+
+.show-review-author-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.show-review-author-name {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.show-review-publication {
+  display: flex;
+  justify-content: flex-end;
+}

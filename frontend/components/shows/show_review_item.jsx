@@ -15,10 +15,15 @@ const ShowReviewItem = ({ review, router, history }) => {
   return (
     <li className="show-review-item">
       <div className="show-review-content">
-        <div className="show-review-text"> <img className="show-review-score-icon" src={myIcon} /> {review.body}</div>
-        <div className="show-review-score">{review.score}</div>
-        <a href={review.link_to_review} target="_blank" className="show-review-link">Full Review...</a>
-      </div>
+        <div className="review-score-icon-text-container">
+          <img className="show-review-score-icon" src={myIcon} />
+          <div className="show-review-text">{review.body}</div>
+        </div>
+        <div className="review-score-link-container">
+          <div className="show-review-score">Score: {review.score}</div>
+          <a href={review.link_to_review} target="_blank" className="show-review-link">Full Review...</a>
+        </div>
+    </div>
 
       <div className="show-review-author-info">
         <div className="show-review-author-name">{review.author_name}</div>
