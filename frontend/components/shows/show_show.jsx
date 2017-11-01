@@ -18,7 +18,6 @@ class ShowShow extends React.Component {
   }
 
   render() {
-    debugger
     let myIcon;
     if (this.state.show_score > 84) {
       (myIcon = window.images.sro_icon);
