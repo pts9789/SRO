@@ -108,7 +108,7 @@ class ShowShow extends React.Component {
 
         <div className="show-reviews-lists">
           <div className="show-review-list-container">
-            <div className="show-review-list-header2">CRITIC REVIEWS</div>
+            <div className="show-review-list-header">CRITIC REVIEWS</div>
             <ul className="show-review-list-critics">
               {
                 this.props.criticReviews.map((review) => (
@@ -119,7 +119,7 @@ class ShowShow extends React.Component {
 
           </div>
           <div className="show-review-list-container">
-            <div className="show-review-list-header2">AUDIENCE REVIEWS</div>
+            <div className="show-review-list-header">AUDIENCE REVIEWS</div>
             <ul className="show-review-list-users">
               {
                 this.props.userReviews.map((review) => (
