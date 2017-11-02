@@ -10,7 +10,7 @@ export const createShowsToSee = (showsToSee) => {
 
 
 
-export const deleteReview = (id) => {
+export const deleteShowsToSee = (id) => {
   return(
     $.ajax({
       method: "DELETE",
