@@ -9,7 +9,6 @@ class Api::ReviewsController < ApplicationController
     @review.type = "UserReview"
     @review.author_name = current_user.username
     @review.author_id = current_user.id
-    @review.show_id = params[:showId]
 
     if @review.save
       render :show
@@ -38,6 +37,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:score, :body)
+    params.require(:review).permit(:score, :body, :show_id)
   end
 end

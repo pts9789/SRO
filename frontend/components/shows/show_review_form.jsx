@@ -1,11 +1,10 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
-class ReviewForm extends React.Component {
+class ShowReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rating: '',
+      rating: 99,
       body: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,6 +21,7 @@ class ReviewForm extends React.Component {
     this.navigateToBenchShow();
   }
 
+
   update(field) {
     return (e) => this.setState({
       [field]: e.currentTarget.value
@@ -30,25 +30,27 @@ class ReviewForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="show-review-form-score-and-body-container">
         <form onSubmit={this.handleSubmit}>
-          <label>Rating</label>
-            1<input type="radio" name="rating" value="2" checked />
-            2<input type="radio" name="rating" value="23" />
-            3<input type="radio" name="rating" value="59" />
-            4<input type="radio" name="rating" value="85" />
-            5<input type="radio" name="rating" value="100" />
-
-
+          <input
+            type="number"
+            placeholder="     ADD YOUR RATING ⭐ ⭐ ⭐ ⭐ ⭐"
+            className="show-review-form-score"
+            min="0"
+            max="100" />
 
           <textarea
-            cols="30"
-            rows="10"
+            cols="100"
+            rows="5"
+            placeholder="    ADD YOUR REVIEW!"
+            className="show-review-form-body"
             value={this.state.body}
-            onChange={this.update("body")}
-          />
-          <br/>
-          <input type="submit" />
+            onChange={this.update("body")} />
+
+          <input
+            type="submit"
+            className="show-review-form-button"
+            value="Post" />
         </form>
 
       </div>
@@ -56,4 +58,4 @@ class ReviewForm extends React.Component {
  }
 }
 
-export default withRouter(ReviewForm);
+export default ShowReviewForm;

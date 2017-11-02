@@ -3,6 +3,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import ShowIndexItem from './show_index_item';
 import ShowReviewItem from './show_review_item';
+import ShowReviewFormContainer from './show_review_form_container';
 
 class ShowShow extends React.Component {
 
@@ -69,15 +70,20 @@ class ShowShow extends React.Component {
                   </div>
                 </div>
               </div>
+
               <div className="show-show-upper-right-content2-container">
                 <div className="show-show-upper-right-content-header">USER SCORE</div>
                 <div className="show-show-upper-right-content2">
 
                 </div>
+
               </div>
             </div>
-            <div className="show-show-bottom-right-content" >
+
+            <div className="show-show-bottom-right-content">
+              <ShowReviewFormContainer />
             </div>
+
           </div>
         </div>
 
