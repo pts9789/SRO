@@ -10,11 +10,11 @@ export const createShowsToSee = (showsToSee) => {
 
 
 
-export const deleteShowsToSee = (id) => {
+export const deleteShowsToSee = (showsToSee) => {
   return(
     $.ajax({
       method: "DELETE",
-      url: `api/shows_to_see/${id}`,
+      url: `api/shows_to_see/${showsToSee.id}`,
     })
   );
 };
