@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102060207) do
+ActiveRecord::Schema.define(version: 20171102122227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20171102060207) do
     t.text "link_to_review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "author_id"
+    t.integer "author_id"
   end
 
   create_table "shows", force: :cascade do |t|
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20171102060207) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
-    t.text "critic_consensus"
+    t.integer "critic_consensus"
   end
 
   create_table "users", force: :cascade do |t|
