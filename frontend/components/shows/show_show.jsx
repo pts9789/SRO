@@ -36,6 +36,22 @@ class ShowShow extends React.Component {
     } else {
       (criticScore = `${this.state.critic_score}%`);
     }
+
+    let userIcon;
+    if (this.state.user_score > 84) {
+      (userIcon = window.images.sro_icon);
+    } else if (this.state.user_score > 60) {
+      (userIcon = window.images.comedy_icon);
+    } else {
+      (userIcon = window.images.tragedy_icon);
+    }
+
+    let userScore;
+    if (!this.state.user_score) {
+      (userScore = "N/A");
+    } else {
+      (userScore = `${this.state.user_score}%`);
+    }
     return(
       <div className="show-show-page">
 
@@ -58,7 +74,7 @@ class ShowShow extends React.Component {
           <div className="show-show-right-side-content">
             <div className="show-show-upper-right-content-container">
               <div className="show-show-upper-right-content1-container">
-                <div className="show-show-upper-right-content-header">SRO SCORE</div>
+                <div className="show-show-upper-right-content-header1">SRO SCORE</div>
                 <div className="show-show-upper-right-content1">
                   <div className="show-container-for-critic-score">
                     <img className="show-critic-score-icon" src={criticIcon} />
@@ -72,9 +88,12 @@ class ShowShow extends React.Component {
               </div>
 
               <div className="show-show-upper-right-content2-container">
-                <div className="show-show-upper-right-content-header">USER SCORE</div>
+                <div className="show-show-upper-right-content-header2">AUDIENCE SCORE</div>
                 <div className="show-show-upper-right-content2">
-
+                  <div className="show-container-for-user-score">
+                    <img className="show-user-score-icon" src={userIcon} />
+                    <div className="show-user-score">{userScore}</div>
+                  </div>
                 </div>
 
               </div>
@@ -89,7 +108,7 @@ class ShowShow extends React.Component {
 
         <div className="show-reviews-lists">
           <div className="show-review-list-container">
-            <div className="show-review-list-header">CRITIC REVIEWS</div>
+            <div className="show-review-list-header2">CRITIC REVIEWS</div>
             <ul className="show-review-list-critics">
               {
                 this.props.criticReviews.map((review) => (
@@ -100,7 +119,7 @@ class ShowShow extends React.Component {
 
           </div>
           <div className="show-review-list-container">
-            <div className="show-review-list-header">USER REVIEWS</div>
+            <div className="show-review-list-header2">AUDIENCE REVIEWS</div>
             <ul className="show-review-list-users">
               {
                 this.props.userReviews.map((review) => (
