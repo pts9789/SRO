@@ -20,6 +20,14 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: 'Review'
 
+  has_many :shows_to_see,
+    foreign_key: :user_id,
+    class_name: 'ShowsToSee'
+
+  has_many :shows,
+    through: :shows_to_see,
+    source: :show
+
   attr_reader :password
 
   after_initialize :ensure_session_token

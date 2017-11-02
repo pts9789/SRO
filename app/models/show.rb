@@ -37,4 +37,12 @@ class Show < ApplicationRecord
     class_name: 'UserReview'
     # -> { where type: 'CriticReview' }
 
+  has_many :following_users,
+    foreign_key: :show_id,
+    class_name: :'ShowsToSee'
+
+  has_many :users,
+    through: :following_users,
+    source: :user
+
 end
