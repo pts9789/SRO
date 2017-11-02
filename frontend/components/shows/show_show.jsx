@@ -81,7 +81,7 @@ class ShowShow extends React.Component {
             </div>
 
             <div className="show-show-bottom-right-content">
-              <ShowReviewFormContainer />
+              <ShowReviewFormContainer showId={this.props.show.id}/>
             </div>
 
           </div>

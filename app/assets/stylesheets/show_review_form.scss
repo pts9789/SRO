@@ -1,9 +1,25 @@
 
 .show-show-bottom-right-content{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
   justify-content: flex-end;
+}
+
+.show-review-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-form-errors{
+  display: flex;
+}
+
+.review-form-error-text {
+  font-size: 14px;
+  color: red;
+  margin-right: 20px;
 }
 
 .show-review-form-score-and-body-container{
@@ -26,12 +42,14 @@
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: lighter;
   margin: 10px 0;
+  cursor: default;
 }
+
 
 .show-review-form-body {
   display: block;
   width: 600px;
-  height: 6px;
+  height: 60px;
   padding: 5px 13px;
   font-size: 16px;
   line-height: 1.25;

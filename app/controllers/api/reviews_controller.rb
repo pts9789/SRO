@@ -5,11 +5,10 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(post_params)
+    @review = Review.new(review_params)
     @review.type = "UserReview"
     @review.author_name = current_user.username
-    @review.author_id = current_user.id
-
+    @review.author_id = current_user.id.to_i
     if @review.save
       render :show
     else

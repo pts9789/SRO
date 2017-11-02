@@ -18,5 +18,5 @@ const MyModal = ({modal, component: Component, hideModal}) => {
 
 export default MyModal;
 
-// each Modal (login, signup, *review) has its own
-// corresponding component (NewSessionForm, NewUserForm, *TBD)
+// each Modal (login, signup) has its own
+// corresponding component (NewSessionForm, NewUserForm)
