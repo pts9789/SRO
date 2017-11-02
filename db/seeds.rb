@@ -11,6 +11,9 @@ User.destroy_all
 Show.destroy_all
 Review.destroy_all
 
+# ----------------------------------------------------------
+# User Seeds
+
 u1= User.create!({email:"guest@guest.com", username:"guest", password:"arizona"})
 u2= User.create!({email:"patrick@patrick.com", username:"patrick", password:"arizona"})
 u3= User.create!({email:"jenny@jenny.com", username:"jenny", password:"arizona"})
@@ -22,6 +25,9 @@ u8= User.create!({email:"chris@chris.com", username:"chris", password:"arizona"}
 u9= User.create!({email:"karl@karl.com", username:"karl", password:"arizona"})
 u10= User.create!({email:"michael@michael.com", username:"michael", password:"arizona"})
 u11= User.create!({email:"charlie@charlie.com", username:"charlie", password:"arizona"})
+
+# ----------------------------------------------------------
+# Play Seeds
 
 p1 = Play.create!({
   title: "Harry Potter and the Cursed Child- Parts I and II",
@@ -130,7 +136,8 @@ p11 = Play.create!({
   image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/morons_poster.jpg"})
 
 
-# --------------------------------------------------------------------------
+  # ----------------------------------------------------------
+  # Musical Seeds
 
 m1 = Musical.create({
   title: "Mean Girls",
@@ -349,6 +356,9 @@ m23 = Musical.create!({
   theater_info: "Broadhurst Theatre: 235 W. 44th St.",
   critic_consensus: "Undeniably entertaining, but also relevant to the magical thinking that seems to have overtaken so much of the world.",
   image: "https://s3.us-east-2.amazonaws.com/sro-rottentomatoes-dev/show_posters/ana_poster.jpg"})
+
+  # ----------------------------------------------------------
+  # CriticReview Seeds
 
   cr1 = CriticReview.create!({
     type: "CriticReview",
@@ -1389,5 +1399,841 @@ m23 = Musical.create!({
     publication: "Variety",
     link_to_review: "http://variety.com/2017/legit/reviews/anastasia-review-broadway-musical-1202393569/"
     })
+
+
+# ----------------------------------------------------------
+# UserReview Seeds
+
+    ur1 = UserReview.create!({
+      type: "UserReview",
+      author_name: u1.username,
+      body: "This show looks AMAZING!!!  I want to see it so bad!  I’ve heard such great things about it.",
+      score: 100,
+      show_id: p6.id,
+      author_id: u1.id})
+
+    ur2 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "Good Show. Made me laugh a lot.",
+      score: 80,
+      show_id: p6.id,
+      author_id: u2.id})
+
+    ur3 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "THESE GUYS ARE HILARIOUS!",
+      score: 90,
+      show_id: p6.id,
+      author_id: u3.id})
+
+    ur4 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "A great night at the theater",
+      score: 85,
+      show_id: p6.id,
+      author_id: u1.id})
+
+    ur5 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "I don't understand the hype.  Funny, but not worth the price of a broadway ticket.",
+      score: 60,
+      show_id: p6.id,
+      author_id: u5.id})
+
+    ur6 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "It's that chick from Downton! Nice surprise.",
+      score: 80,
+      show_id: p7.id,
+      author_id: u6.id})
+
+    ur7 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "I definitely fell asleep during this one.",
+      score: 50,
+      show_id: p7.id,
+      author_id: u7.id})
+
+    ur8 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "I love a good revival",
+      score: 90,
+      show_id: p7.id,
+      author_id: u8.id})
+
+    ur9 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "I hate when TV people think they can actually act.",
+      score: 70,
+      show_id: p7.id,
+      author_id: u9.id})
+
+    ur10 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "Definitely worth it if you can get a cheap ticket!",
+      score: 85,
+      show_id: p7.id,
+      author_id: u10.id})
+
+    ur11 = UserReview.create!({
+      type: "UserReview",
+      author_name: u11.username,
+      body: "I don't get it...",
+      score: 60,
+      show_id: p8.id,
+      author_id: u11.id})
+
+    ur12 = UserReview.create!({
+      type: "UserReview",
+      author_name: u1.username,
+      body: "JULIE TAYMOR CAN DO NO WRONG!",
+      score: 90,
+      show_id: p8.id,
+      author_id: u1.id})
+
+    ur13 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "I don't understand the hype.  Confusing and not worth the price of a broadway ticket.",
+      score: 50,
+      show_id: p8.id,
+      author_id: u3.id})
+
+    ur14 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "Yes. This is everything I want in a play.",
+      score: 60,
+      show_id: p8.id,
+      author_id: u4.id})
+
+    ur15 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "An oldie but definitely a goodie",
+      score: 80,
+      show_id: m6.id,
+      author_id: u5.id})
+
+    ur16 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "Who doesn't like Phantom? Honestly?!?!",
+      score: 90,
+      show_id: m6.id,
+      author_id: u6.id})
+
+    ur17 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "This is a garbage musical",
+      score: 20,
+      show_id: m6.id,
+      author_id: u7.id})
+
+    ur18 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "LOVE LOVE LOVE LOVE LOVE LOVE LOVE",
+      score: 100,
+      show_id: m6.id,
+      author_id: u8.id})
+
+    ur19 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "The PHAAAAAAAAAAAAAAAANTOM of the opera is theeeeeeeeeeeeere",
+      score: 93,
+      show_id: m6.id,
+      author_id: u9.id})
+
+    ur20 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "Better than the movie!",
+      score: 83,
+      show_id: m7.id,
+      author_id: u10.id})
+
+    ur21 = UserReview.create!({
+      type: "UserReview",
+      author_name: u11.username,
+      body: "And all that Jazz",
+      score: 91,
+      show_id: m7.id,
+      author_id: u10.id})
+
+    ur22 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "Still good after all these years",
+      score: 89,
+      show_id: m7.id,
+      author_id: u2.id})
+
+    ur23 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "I'll be singing these tunes all week.",
+      score: 91,
+      show_id: m7.id,
+      author_id: u3.id})
+
+    ur24 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "I could watch the cell block tango on repeat",
+      score: 100,
+      show_id: m7.id,
+      author_id: u4.id})
+
+    ur25 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "It's just Hamlet with Lions. Great...",
+      score: 70,
+      show_id: m8.id,
+      author_id: u5.id})
+
+    ur26 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "CAN YOU FEEL THE LOVE TONIGHT!",
+      score: 93,
+      show_id: m8.id,
+      author_id: u6.id})
+
+    ur27 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "How can anyone give this show less than 100?",
+      score: 100,
+      show_id: m8.id,
+      author_id: u7.id})
+
+    ur28 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "An elephant walks down the isles... AMAZING!",
+      score: 95,
+      show_id: m8.id,
+      author_id: u8.id})
+
+    ur29 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "IT'S SOOOOOO GOOOOOD!",
+      score: 100,
+      show_id: m8.id,
+      author_id: u9.id})
+
+    ur30 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "NO ONE'S GONNA BRING MAYYYYYYYYY DOWN!",
+      score: 89,
+      show_id: m9.id,
+      author_id: u10.id})
+
+    ur31 = UserReview.create!({
+      type: "UserReview",
+      author_name: u11.username,
+      body: "That green chick can really sing!",
+      score: 83,
+      show_id: m9.id,
+      author_id: u11.id})
+
+    ur32 = UserReview.create!({
+      type: "UserReview",
+      author_name: u1.username,
+      body: "There's a reason Avenue Q won the Tony...",
+      score: 75,
+      show_id: m9.id,
+      author_id: u1.id})
+
+    ur33 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "Stephen Shwartz is a rock star.",
+      score: 92,
+      show_id: m9.id,
+      author_id: u3.id})
+
+    ur34 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "I wish I could have seen the original cast.",
+      score: 99,
+      show_id: m9.id,
+      author_id: u4.id})
+
+    ur35 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "Parker and Stone are briliant.",
+      score: 100,
+      show_id: m10.id,
+      author_id: u5.id})
+
+    ur36 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "Can you believe this is the same guy that wrote FROZEN?",
+      score: 97,
+      show_id: m10.id,
+      author_id: u6.id})
+
+    ur37 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "Give me more Josh Gad.",
+      score: 100,
+      show_id: m10.id,
+      author_id: u7.id})
+
+    ur38 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "My parents were super offended, but I guess that happens.",
+      score: 99,
+      show_id: m10.id,
+      author_id: u4.id})
+
+    ur39 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "hasa diga eebowai",
+      score: 100,
+      show_id: m10.id,
+      author_id: u9.id})
+
+    ur40 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "Wayne Brady on Broadway!!!",
+      score: 99,
+      show_id: m11.id,
+      author_id: u10.id})
+
+    ur41 = UserReview.create!({
+      type: "UserReview",
+      author_name: u11.username,
+      body: "Lots of dancing and big red boots. Awesome",
+      score: 90,
+      show_id: m11.id,
+      author_id: u9.id})
+
+    ur42 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "cyndi lauper.  What else do you need?",
+      score: 91,
+      show_id: m11.id,
+      author_id: u2.id})
+
+    ur43 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "This show has so much heart! <3 ",
+      score: 98,
+      show_id: m12.id,
+      author_id: u9.id})
+
+    ur44 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "YAAAAAASSSSSS QUEEEEEEEN",
+      score: 100,
+      show_id: m12.id,
+      author_id: u9.id})
+
+    ur45 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "More Carol King Please",
+      score: 88,
+      show_id: m12.id,
+      author_id: u5.id})
+
+    ur46 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "I wanted to like this more",
+      score: 70,
+      show_id: m12.id,
+      author_id: u6.id})
+
+    ur47 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "Really great date night",
+      score: 82,
+      show_id: m12.id,
+      author_id: u7.id})
+
+    ur48 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "5 Stars, would definitely see again",
+      score: 88,
+      show_id: m12.id,
+      author_id: u8.id})
+
+    ur49 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "The music is fantastic",
+      score: 79,
+      show_id: m12.id,
+      author_id: u9.id})
+
+    ur50 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "More Disney, More Problems",
+      score: 50,
+      show_id: m13.id,
+      author_id: u10.id})
+
+    ur51 = UserReview.create!({
+      type: "UserReview",
+      author_name: u1.username,
+      body: "This is one of my favorite movies, but the show is garbage",
+      score: 60,
+      show_id: m13.id,
+      author_id: u1.id})
+
+    ur52 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "Great family fun!",
+      score: 88,
+      show_id: m13.id,
+      author_id: u2.id})
+
+    ur53 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "A Whole NEW WOOOOOOOOORLD",
+      score: 100,
+      show_id: m13.id,
+      author_id: u3.id})
+
+    ur54 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "YOU AINT NEVER HAD A FRIEND LIKE ME!",
+      score: 100,
+      show_id: m13.id,
+      author_id: u4.id})
+
+    ur55 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "This is the best show I've ever seen",
+      score: 100,
+      show_id: m14.id,
+      author_id: u5.id})
+
+    ur56 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "This is the best show I've ever seen",
+      score: 100,
+      show_id: m14.id,
+      author_id: u6.id})
+
+    ur57 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "This is the best show I've ever seen",
+      score: 100,
+      show_id: m14.id,
+      author_id: u7.id})
+
+    ur58 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "This is the best show I've ever seen",
+      score: 100,
+      show_id: m14.id,
+      author_id: u8.id})
+
+    ur59 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "This is the best show I've ever seen",
+      score: 100,
+      show_id: m14.id,
+      author_id: u9.id})
+
+    ur60 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "These kids are so talented.",
+      score: 89,
+      show_id: m15.id,
+      author_id: u10.id})
+
+    ur61 = UserReview.create!({
+      type: "UserReview",
+      author_name: u11.username,
+      body: "Would have been better with Jack Black",
+      score: 65,
+      show_id: m15.id,
+      author_id: u11.id})
+
+    ur62 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "I loved the movie, and I loved the show! Bravo.",
+      score: 93,
+      show_id: m15.id,
+      author_id: u2.id})
+
+    ur63 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "I wish I could play guitar like that",
+      score: 100,
+      show_id: m15.id,
+      author_id: u3.id})
+
+    ur64 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "Oh great... another movie being made into a musical.",
+      score: 60,
+      show_id: m15.id,
+      author_id: u4.id})
+
+    ur65 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "Songs, heartbreak and pie.  Count me in.",
+      score: 91,
+      show_id: m16.id,
+      author_id: u5.id})
+
+    ur66 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "It's not the same without Jessie Mueler.",
+      score: 70,
+      show_id: m16.id,
+      author_id: u6.id})
+
+    ur67 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "It's very charming. Got tickets for a great price on TDF",
+      score: 88,
+      show_id: m16.id,
+      author_id: u7.id})
+
+    ur68 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "I definitely fell asleep.  Pretty music though.",
+      score: 71,
+      show_id: m16.id,
+      author_id: u8.id})
+
+    ur69 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "Seeing this in 3 weeks when I visit New York!",
+      score: 100,
+      show_id: m16.id,
+      author_id: u9.id})
+
+    ur70 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "Another unnecessary revival.",
+      score: 50,
+      show_id: m17.id,
+      author_id: u10.id})
+
+    ur71 = UserReview.create!({
+      type: "UserReview",
+      author_name: u1.username,
+      body: "Nothing brings people together like a bad show.",
+      score: 20,
+      show_id: m17.id,
+      author_id: u1.id})
+
+    ur72 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "Why Webber... Why!?!?!?",
+      score: 33,
+      show_id: m17.id,
+      author_id: u2.id})
+
+    ur73 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "What a waste of money",
+      score: 12,
+      show_id: m17.id,
+      author_id: u10.id})
+
+    ur74 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "MEMORY!!! I love that song.",
+      score: 100,
+      show_id: m17.id,
+      author_id: u4.id})
+
+    ur75 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "Ben Platt is %^$@ing AMAZING!",
+      score: 100,
+      show_id: m18.id,
+      author_id: u5.id})
+
+    ur76 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "I saw this at Second Stage. It's fantastic.",
+      score: 100,
+      show_id: m18.id,
+      author_id: u6.id})
+
+    ur77 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "I wish I could afford tickets to see this.  I love the music.",
+      score: 100,
+      show_id: m18.id,
+      author_id: u7.id})
+
+    ur78 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "SO much better than La La Land.",
+      score: 100,
+      show_id: m18.id,
+      author_id: u8.id})
+
+    ur79 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "Pasek and Paul can do no wrong... Accept for that weird circus movie they have coming out.",
+      score: 100,
+      show_id: m18.id,
+      author_id: u9.id})
+
+    ur80 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "A Canadian Musical... Color me interested",
+      score: 87,
+      show_id: m19.id,
+      author_id: u10.id})
+
+    ur81 = UserReview.create!({
+      type: "UserReview",
+      author_name: u11.username,
+      body: "What a breautiful story.",
+      score: 90,
+      show_id: m19.id,
+      author_id: u11.id})
+
+    ur82 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "It's nice to see theater about good people.",
+      score: 93,
+      show_id: m19.id,
+      author_id: u2.id})
+
+    ur83 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "A triumph of the human spirit",
+      score: 82,
+      show_id: m19.id,
+      author_id: u3.id})
+
+    ur84 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "I wanted to clap, but all the songs went one into the next.",
+      score: 70,
+      show_id: m19.id,
+      author_id: u4.id})
+
+    ur85 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "I left at intermission",
+      score: 50,
+      show_id: m20.id,
+      author_id: u5.id})
+
+    ur86 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "It's like Les Mis in Vietnam!",
+      score: 75,
+      show_id: m20.id,
+      author_id: u6.id})
+
+    ur87 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "WHY GOD!?!?! WHY THIS SHOW??",
+      score: 20,
+      show_id: m20.id,
+      author_id: u7.id})
+
+    ur88 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "This score makes me weep!",
+      score: 100,
+      show_id: m20.id,
+      author_id: u8.id})
+
+    ur89 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "There was a helicopter on stage. Nuff said.",
+      score: 90,
+      show_id: m20.id,
+      author_id: u9.id})
+
+    ur90 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "Bette Middler is everything and more",
+      score: 100,
+      show_id: m21.id,
+      author_id: u10.id})
+
+    ur91 = UserReview.create!({
+      type: "UserReview",
+      author_name: u1.username,
+      body: "Hello Dolly! It's so nice to have you back where you belong!",
+      score: 100,
+      show_id: m21.id,
+      author_id: u1.id})
+
+    ur92 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "You're looking swell Dolly!",
+      score: 100,
+      show_id: m21.id,
+      author_id: u2.id})
+
+    ur93 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "Put on your sunday clothes when you feel down and out!",
+      score: 99,
+      show_id: m21.id,
+      author_id: u10.id})
+
+    ur94 = UserReview.create!({
+      type: "UserReview",
+      author_name: u4.username,
+      body: "Bette Middler is great and everything... But Gavin Creel THO!",
+      score: 100,
+      show_id: m21.id,
+      author_id: u4.id})
+
+    ur95 = UserReview.create!({
+      type: "UserReview",
+      author_name: u5.username,
+      body: "Great movie. Horrible musical",
+      score: 20,
+      show_id: m22.id,
+      author_id: u5.id})
+
+    ur96 = UserReview.create!({
+      type: "UserReview",
+      author_name: u6.username,
+      body: "Cheer up Charlie! ",
+      score: 60,
+      show_id: m22.id,
+      author_id: u6.id})
+
+    ur97 = UserReview.create!({
+      type: "UserReview",
+      author_name: u7.username,
+      body: "I just want to watch Gene Wilder, is that so wrong??",
+      score: 70,
+      show_id: m22.id,
+      author_id: u7.id})
+
+    ur98 = UserReview.create!({
+      type: "UserReview",
+      author_name: u8.username,
+      body: "Don’t forget what happened to the man who suddenly got everything he wanted.",
+      score: 99,
+      show_id: m22.id,
+      author_id: u8.id})
+
+    ur99 = UserReview.create!({
+      type: "UserReview",
+      author_name: u9.username,
+      body: "He lived Happily Ever After",
+      score: 20,
+      show_id: m22.id,
+      author_id: u9.id})
+
+    ur100 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "Bring back the bat!",
+      score: 75,
+      show_id: m23.id,
+      author_id: u10.id})
+
+    ur101 = UserReview.create!({
+      type: "UserReview",
+      author_name: u1.username,
+      body: "I just love Ahrens and Flaherty.",
+      score: 90,
+      show_id: m23.id,
+      author_id: u1.id})
+
+    ur102 = UserReview.create!({
+      type: "UserReview",
+      author_name: u2.username,
+      body: "Have you heard?!? There's a rumour in St. Petersburg!",
+      score: 100,
+      show_id: m23.id,
+      author_id: u2.id})
+
+    ur103 = UserReview.create!({
+      type: "UserReview",
+      author_name: u3.username,
+      body: "Once Upon a December",
+      score: 75,
+      show_id: m23.id,
+      author_id: u3.id})
+
+    ur104 = UserReview.create!({
+      type: "UserReview",
+      author_name: u10.username,
+      body: "On a journey to the paaaaaaaaaaaast",
+      score: 75,
+      show_id: m23.id,
+      author_id: u10.id})
 
 end

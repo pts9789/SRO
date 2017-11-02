@@ -58,7 +58,7 @@ class ShowReviewForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <input
               type="number"
-              placeholder="     ADD YOUR RATING ⭐ ⭐ ⭐ ⭐ ⭐"
+              placeholder="    ADD YOUR RATING ⭐ ⭐ ⭐ ⭐ ⭐"
               className="show-review-form-score"
               min="0"
               max="100"
@@ -67,7 +67,7 @@ class ShowReviewForm extends React.Component {
             <textarea
               cols="100"
               rows="5"
-              placeholder="    ADD YOUR REVIEW !"
+              placeholder="   ADD YOUR REVIEW !"
               className="show-review-form-body"
               value={this.state.body}
               onChange={this.update("body")}/>
