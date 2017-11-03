@@ -14,7 +14,23 @@
 .logo {
   height: 55px;
   width: auto;
-  margin: 15px 0 5px 20px;
+  margin: 15px 0 5px 35px;
+}
+
+.search-bar {
+  display: block;
+  width: 30%;
+  height: 34px;
+  padding: 0px 10px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #555;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 25px auto;
+  font-weight: lighter;
 }
 
 .session-list {

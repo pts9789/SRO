@@ -18,6 +18,12 @@ const NavBar = ({ modal, hideModal, fetchShow }) => {
     <div className="nav-bar-container">
       <div className="nav-bar-main">
         <Link to="/"> <img className="logo" src={window.images.logo} /> </Link>
+        
+        <input
+          type="text"
+          name="email"
+          placeholder="Search for Shows"
+          className="search-bar"/>
 
         <LoginStatusContainer />
 
