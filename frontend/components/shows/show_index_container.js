@@ -11,6 +11,9 @@ const mapStateToProps = (state) => {
     musicals: Object.values(state.entities.shows).filter((show) => {
       return show.type === "Musical" && show.status === "Now Playing";
     }),
+    comingSoon: Object.values(state.entities.shows).filter((show) => {
+      return show.status === "Coming Soon";
+    }),
   });
 };
 

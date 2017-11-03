@@ -38,10 +38,11 @@ body {
   display: flex;
   flex-direction: column;
   padding: 15px;
+  border-right: .5px solid #F0F0F0;
 }
 
 .main-page-list-container:last-child {
-  border-left: .5px solid #F0F0F0	;
+  border: none;
 }
 
 .show-index-item{

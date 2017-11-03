@@ -19,14 +19,22 @@ const ShowIndexItem = ({ show, router, history }) => {
     (score = `${show.show_score}%`);
   }
 
-  return (
-    <li className="show-index-item">
-      <Link to={`/shows/${show.id}`} className="link-to-show" >
-        <img className="index-critic-score-icon" src={myIcon} />
-        <div className="index-critic-score">{score}</div>
-        {show.title}</Link>
-    </li>
-  );
+  if (show.status === "Now Playing") {
+    return (
+      <li className="show-index-item">
+        <Link to={`/shows/${show.id}`} className="link-to-show" >
+          <img className="index-critic-score-icon" src={myIcon} />
+          <div className="index-critic-score">{score}</div>
+          {show.title}</Link>
+      </li>
+    );
+  } else {
+    return (
+      <li className="show-index-item">
+        <Link to={`/shows/${show.id}`} className="link-to-show" >{show.title}</Link>
+      </li>
+    );
+  }
 }
 
 export default ShowIndexItem;

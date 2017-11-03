@@ -32,6 +32,16 @@ class ShowIndex extends React.Component {
             }
           </ul>
         </div>
+        <div className="main-page-list-container">
+          <div className="main-page-list-header">COMING SOON</div>
+          <ul>
+            {
+              this.props.comingSoon.map((show) => (
+                <ShowIndexItem key={show.id} show={show} />
+              ))
+            }
+          </ul>
+        </div>
       </div>
     );
   }
