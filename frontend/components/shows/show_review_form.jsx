@@ -4,7 +4,7 @@ class ShowReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      score: 0,
+      score: '',
       body: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,7 +18,13 @@ class ShowReviewForm extends React.Component {
       show_id: showId
     });
     if (this.props.loggedIn) {
-      this.props.createReview(review);
+      this.props.createReview(review).then(() => {
+        return(this.props.fetchShow(showId));
+      });
+      this.setState({
+        score: '',
+        body: ''
+      });
     } else {
       this.props.launchLogin();
     }
@@ -62,6 +68,7 @@ class ShowReviewForm extends React.Component {
               className="show-review-form-score"
               min="0"
               max="100"
+              onChange={this.update("score")}
               onClick={ (e) => this.requireLogin()}/>
 
             <textarea

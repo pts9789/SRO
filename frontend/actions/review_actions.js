@@ -22,9 +22,10 @@ export const receiveReviewErrors = (errors) => ({
 export const createReview = (review) => (dispatch) => {
   return ApiUtil.createReview(review).then((review) => {
     return dispatch(receiveReview(review));
-  }, (err) => (
+  }, (err) => {
+    return(
     dispatch(receiveReviewErrors(err.responseJSON))
-  ));
+  );});
 };
 
 export const updateReview = (review) => (dispatch) => {
