@@ -12,6 +12,13 @@
   width: 100%
 }
 
+.show-show-left-side-content{
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  width: 100%;
+}
+
 .show-container-for-title-image {
   display: flex;
   flex-direction: column;
@@ -68,21 +75,22 @@
 .show-show-info {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
-  padding: 10px 10px 10px 0;
+  padding-top: 10px;
 }
 
 .show-show-right-side-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 5px;
+  // justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
   width: 100%;
 }
 
 .show-show-upper-right-content-container{
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .show-show-upper-right-content1-container{

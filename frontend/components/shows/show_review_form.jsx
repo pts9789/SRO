@@ -68,6 +68,7 @@ class ShowReviewForm extends React.Component {
               className="show-review-form-score"
               min="0"
               max="100"
+              value={this.state.score}
               onChange={this.update("score")}
               onClick={ (e) => this.requireLogin()}/>
 

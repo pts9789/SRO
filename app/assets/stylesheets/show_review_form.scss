@@ -2,8 +2,9 @@
 .show-show-bottom-right-content{
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%
 }
 
 .show-review-form-container {
