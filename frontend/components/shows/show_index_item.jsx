@@ -4,9 +4,9 @@ import { Link, withRouter } from 'react-router-dom';
 const ShowIndexItem = ({ show, router, history }) => {
 
   let myIcon;
-  if (show.show_score > 84) {
+  if (show.show_score >= 85) {
     (myIcon = window.images.sro_icon);
-  } else if (show.show_score > 60) {
+  } else if (show.show_score >= 60) {
     (myIcon = window.images.comedy_icon);
   } else {
     (myIcon = window.images.tragedy_icon);
