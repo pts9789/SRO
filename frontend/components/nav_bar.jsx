@@ -7,6 +7,8 @@ import { fetchShow } from '../actions/shows_actions';
 import LoginStatusContainer from './login_status/login_status_container';
 import NewSessionFormContainer from './session_form/new_session_form_container';
 import NewUserFormContainer from './session_form/new_user_form_container';
+import SearchBarContainer from './search/search_bar_container';
+
 
 
 // Ternary for my Modal will only work for login/signup
@@ -18,12 +20,9 @@ const NavBar = ({ modal, hideModal, fetchShow }) => {
     <div className="nav-bar-container">
       <div className="nav-bar-main">
         <Link to="/"> <img className="logo" src={window.images.logo} /> </Link>
-        
-        <input
-          type="text"
-          name="email"
-          placeholder="Search for Shows"
-          className="search-bar"/>
+
+
+        <SearchBarContainer />
 
         <LoginStatusContainer />
 
