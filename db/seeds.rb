@@ -674,7 +674,7 @@ m23 = Musical.create!({
     type: "CriticReview",
     author_name: "David Cote",
     body: "'Wicked,' a giddy postmodern riff on the classic children's novel and movie, whips up a cyclone of witty jokes and eye-popping visuals, making a bid for best new musical of the season... Chief among the show's triumphs – besides Winnie Holzman's remarkably deft book, Eugene Lee's jaw-dropping set of gears and vines, and the eclectic costuming by Susan Hilferty – are the female leads",
-    score: 00,
+    score: 90,
     show_id: m9.id,
     publication: "Time Out New York",
     link_to_review: "https://wickedthemusical.com/TimeOutNY"
