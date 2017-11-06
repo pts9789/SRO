@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-const SearchResultItem = ({show, history, clearSearch, fetchShow}) => (
+const SearchResultItem = ({show, clearSearch, fetchShow}) => (
   <div onClick={(e) => {
         fetchShow(show.id);
         clearSearch();
