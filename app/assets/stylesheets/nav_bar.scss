@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .nav-bar-main {
   display: flex;
   justify-content: center;
@@ -9,18 +10,27 @@
   justify-content: space-between;
   height: 85px;
   margin-top: 20px;
+  flex-direction: row;
+}
+
+.logo-and-search-bar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .logo {
   height: 55px;
   width: auto;
-  margin: 15px 0 5px 35px;
+  margin: 15px 75px 5px 35px;
 }
+
+
 
 .search-bar {
   display: block;
-  width: 30%;
   height: 34px;
+  width: 300px;
   padding: 0px 10px;
   font-size: 16px;
   line-height: 1.25;
@@ -31,6 +41,24 @@
   font-family: 'Source Sans Pro', sans-serif;
   margin: 25px auto;
   font-weight: lighter;
+}
+
+.search-dropdown{
+  background: white;
+  position: absolute;
+  top: 81px;
+  z-index: 5;
+  color: black;
+  font-size: 18px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  border-left: 1px solid #ccc;
+}
+
+.search-list-item {
+  padding: 10px;
+  border-bottom: 1px solid #F5F5F5;
+  min-width: 350px;
 }
 
 .session-list {

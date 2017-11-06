@@ -8,7 +8,7 @@ import LoginStatusContainer from './login_status/login_status_container';
 import NewSessionFormContainer from './session_form/new_session_form_container';
 import NewUserFormContainer from './session_form/new_user_form_container';
 import SearchBarContainer from './search/search_bar_container';
-
+import { Route, Switch } from 'react-router-dom';
 
 
 // Ternary for my Modal will only work for login/signup
@@ -19,10 +19,11 @@ const NavBar = ({ modal, hideModal, fetchShow }) => {
   return(
     <div className="nav-bar-container">
       <div className="nav-bar-main">
-        <Link to="/"> <img className="logo" src={window.images.logo} /> </Link>
+        <div className="logo-and-search-bar-container">
+          <Link to="/"> <img className="logo" src={window.images.logo} /> </Link>
 
-
-        <SearchBarContainer />
+          <SearchBarContainer />
+        </div>
 
         <LoginStatusContainer />
 

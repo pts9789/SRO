@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ShowShow from './show_show';
 import { fetchShow } from '../../actions/shows_actions';
+import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
   const show = state.entities.shows[ownProps.match.params.showId] || {};
@@ -28,4 +29,4 @@ const mapDispatchToProps = (dispatch) => {
   });
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShowShow);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ShowShow));

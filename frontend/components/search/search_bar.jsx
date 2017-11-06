@@ -8,7 +8,6 @@ class SearchBar extends React.Component {
     this.state = {searchText: "", searchResults: []};
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleExit = this.handleExit.bind(this);
     this.clearSearch = this.clearSearch.bind(this);
   }
 
@@ -18,10 +17,6 @@ class SearchBar extends React.Component {
 
   handleInput(e) {
     this.setState({searchText: e.target.value});
-  }
-
-  handleExit(e) {
-    this.setState({searchText: ""});
   }
 
   handleSubmit(e) {
@@ -45,14 +40,14 @@ class SearchBar extends React.Component {
       searchResults = searchShows(this.props.shows, this.state.searchText)
       .map((show, idx) => {
         return <SearchResultItem clearSearch={this.clearSearch}
-          show={show} key={idx} history={this.props.history}/>;
+          show={show} key={idx} fetchShow={this.props.fetchShow}/>;
 
       }
     );
     }
 
     return (
-      <div onMouseLeave = {this.handleExit}>
+      <div className="search-bar-container">
         <form onSubmit={this.handleSubmit}  >
           <input
             type="text"

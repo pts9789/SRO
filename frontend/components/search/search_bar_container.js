@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import SearchBar from './search_bar';
-import {fetchAllShows} from '../../actions/shows_actions';
+import { fetchAllShows, fetchShow } from '../../actions/shows_actions';
 
 
 const mapStateToProps = (state) => {
@@ -13,7 +13,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return({
-      fetchShows: (() => dispatch(fetchAllShows())),
+      fetchShows: () => dispatch(fetchAllShows()),
+      fetchShow: (id) => dispatch(fetchShow(id)),
     }
   );
 };
