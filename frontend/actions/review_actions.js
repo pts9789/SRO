@@ -11,7 +11,7 @@ export const receiveReview = (review) => ({
 
 export const removeReview = (review) => ({
   type: REMOVE_REVIEW,
-  reviewId: review.id
+  review
 });
 
 export const receiveReviewErrors = (errors) => ({
@@ -36,8 +36,8 @@ export const updateReview = (review) => (dispatch) => {
   ));
 };
 
-export const deleteReview = (reviewId) => (dispatch) => {
-  return ApiUtil.deleteReview(reviewId).then((review) => {
+export const deleteReview = (review) => (dispatch) => {
+  return ApiUtil.deleteReview(review.id).then(() => {
     return dispatch(removeReview(review));
   });
 };

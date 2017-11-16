@@ -90,6 +90,7 @@
 
 }
 
+
 .show-review-link {
   display: flex;
   margin-right: 20px;
@@ -104,6 +105,8 @@
 .show-review-author-info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .show-review-author-name {
@@ -114,4 +117,16 @@
 .show-review-publication {
   display: flex;
   justify-content: flex-end;
+}
+
+.show-review-delete {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #e05236;
+}
+
+.show-review-delete:hover {
+  color: #f85a3c;
+  cursor: pointer;
 }

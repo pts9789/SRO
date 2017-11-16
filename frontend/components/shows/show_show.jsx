@@ -127,7 +127,12 @@ class ShowShow extends React.Component {
             <ul className="show-review-list-users">
               {
                 this.props.userReviews.map((review) => (
-                  <ShowReviewItem key={review.id} review={review} />
+                  <ShowReviewItem
+                    key={review.id}
+                    review={review}
+                    currentUserID={this.props.currentUserID}
+                    deleteReview = {this.props.deleteReview}
+                    fetchShow= {this.props.fetchShow}/>
                 ))
               }
             </ul>

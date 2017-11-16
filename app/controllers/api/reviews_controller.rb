@@ -33,6 +33,13 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review = Review.find(params[:id])
+    unless @review.destroy
+     render json: @review.errors.full_messages, status: 422
+    end
+  end
+
   private
 
   def review_params
