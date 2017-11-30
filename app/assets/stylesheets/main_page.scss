@@ -20,12 +20,28 @@ body {
   width: 98%
 }
 
+.show-index {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+  border-bottom: .5px solid #F0F0F0	;
+}
+
+.photo-banner {
+  display: flex;
+  margin: 0 auto;
+}
+
+.photo-banner-image{
+  width: 182.7px;
+}
+
 .main-page-show-lists {
   display: flex;
   align-items: flex-start;
   width: auto;
-  background-color: white;
-  border-bottom: .5px solid #F0F0F0	;
 }
 
 .main-page-list-header{
