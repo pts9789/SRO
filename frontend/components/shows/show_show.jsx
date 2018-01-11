@@ -132,7 +132,8 @@ class ShowShow extends React.Component {
                     review={review}
                     currentUserID={this.props.currentUserID}
                     deleteReview = {this.props.deleteReview}
-                    fetchShow= {this.props.fetchShow}/>
+                    fetchShow= {this.props.fetchShow}
+                    showId= {this.props.match.params.showId}/>
                 ))
               }
             </ul>

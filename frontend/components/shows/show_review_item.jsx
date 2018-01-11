@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-const ShowReviewItem = ({ review, router, history, currentUserID, deleteReview, fetchShow }) => {
+const ShowReviewItem = ({ review, router, history, currentUserID, deleteReview, fetchShow, showId }) => {
 
   let myIcon;
   if (review.score > 84) {
@@ -14,7 +14,9 @@ const ShowReviewItem = ({ review, router, history, currentUserID, deleteReview, 
 
   let toDelete;
   if (review.author_id == currentUserID) {
-    toDelete = <li className="show-review-delete" onClick={() => deleteReview(review)}>Delete</li>;
+    toDelete = <li className="show-review-delete"
+      onClick={() => deleteReview(review).then(() => fetchShow(showId))}
+      >Delete</li>;
   }
 
   if (review.type === "CriticReview") {
