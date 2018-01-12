@@ -16,7 +16,7 @@ const App = ({modal, hideModal}) => (
 
       <MainPage />
 
-      <footer>
+      <footer className="app-footer">
         <Footer />
       </footer>
     </div>

@@ -89,3 +89,34 @@ body {
 .link-to-show:hover {
   color: #53bbf1;
 }
+
+
+.app-footer{
+  min-width: 98%;
+  margin: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  justify-content: space-between;
+  height: 85px;
+  margin-top: 1px;
+  flex-direction: row;
+}
+
+.footer-text{
+  color: white;
+  font-weight: lighter;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 2px;
+  margin: 0 10px;
+}
