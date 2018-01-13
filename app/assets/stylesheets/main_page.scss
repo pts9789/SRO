@@ -92,31 +92,38 @@ body {
 
 
 .app-footer{
+  display: flex;
+  flex-direction: column;
   min-width: 98%;
   margin: 0;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  background-color: black;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .footer-main {
   display: flex;
-  justify-content: center;
-  background-color: black;
-  justify-content: space-between;
+  flex-direction: column;
   height: 85px;
-  margin-top: 1px;
-  flex-direction: row;
+  margin-left: 5px;
+  padding-bottom: 7px;
 }
 
-.footer-text{
+.footer-text, .contact-text{
   color: white;
   font-weight: lighter;
   font-size: 13px;
   text-decoration: none;
   padding: 2px;
   margin: 0 10px;
+}
+
+.contact-text:hover {
+  color: #f2e817;
+  cursor: pointer;
 }
