@@ -104,14 +104,15 @@ body {
   background-color: black;
   justify-content: space-between;
   align-items: flex-end;
+  margin-bottom: 20px;
 }
 
 .footer-main {
   display: flex;
   flex-direction: column;
-  height: 85px;
-  margin-left: 5px;
-  padding-bottom: 7px;
+  height: 90px;
+  margin: 5px;
+
 }
 
 .footer-text, .contact-text{
