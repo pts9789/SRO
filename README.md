@@ -15,12 +15,12 @@ Rather than shows relying solely on the weight of 1 review, SRO creates an aggre
 The main page of SRO contains a list of all the Plays now on Broadway, all the Musicals now on Broadway, and all the shows that are coming soon. Each show now playing also comes with its SRO score.
 
 ### Shows Page
-![shows page example](docs/Shows_page.png)
+![shows page example](docs/shows_page.png)
 
 Each show has it's own page containing its show status, theater information, SRO score, Audience score, Critic Reviews and User Reviews.
 
 ### User Review
-![user review example](docs/User_reviews.png)
+![user review example](docs/user_reviews.png)
 
 On each Shows page, a user can leave a review and a score for that show.
 
@@ -31,7 +31,7 @@ SRO is a single page app which makes for quick navigation between components
 ## Future Functionality for the Project
 
 ### Searchbar
-![user review example](docs/Search_bar.png)
+![user review example](docs/search_bar.png)
 
 As the database continues to grow, searching line by line through an index of Shows will become tedious. The searchbar lives inside the navigation component and is available on every page.  This will allow the user to navigate from show to show with ease.
 
