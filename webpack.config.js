@@ -1,8 +1,6 @@
 
 var path = require("path");
-new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
-});
+
 
 module.exports = {
   context: __dirname,
@@ -25,7 +23,7 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: [".js", ".jsx", "*"]
+    extensions: [".js", ".jsx", "*"],
   },
 };
 
