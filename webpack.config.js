@@ -1,6 +1,6 @@
 
 var path = require("path");
-
+var webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
@@ -25,6 +25,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", "*"],
   },
+  plugins: [new webpack.EnvironmentPlugin({NODE_ENV: 'production'})]
 };
 
 // used webpack config from Aa homework as a template
